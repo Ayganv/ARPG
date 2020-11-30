@@ -9,6 +9,17 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
+
+
+.idea
+[Ii]dea
+/[Ii]dea
+/.idea/
+/WebGL Builds/
+
+
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
