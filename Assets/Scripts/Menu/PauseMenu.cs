@@ -13,6 +13,9 @@ public class PauseMenu : MonoBehaviour
     [Space]
     public GameObject MenuObject;
 
+    [Space]
+    public bool IsPaused;
+
     private void Awake() {
 
         if(instance != null && instance != this){
@@ -28,6 +31,14 @@ public class PauseMenu : MonoBehaviour
 
     private void Update(){
         
+        if(IsPaused){
+
+            Time.timeScale = 0;
+        }else{
+
+            Time.timeScale = 1;
+        }
+
         if(Input.GetKeyDown(MenuKey)){
 
             ToggleMenu(true);
@@ -35,6 +46,14 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void ToggleMenu(bool toggleBool){
+
+        if(toggleBool == true){
+
+            IsPaused = true;
+        }else{
+
+            IsPaused = false;
+        }
 
         MenuObject.SetActive(toggleBool);
     }
