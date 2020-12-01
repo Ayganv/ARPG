@@ -7,12 +7,19 @@ public class EnemyShoot : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
+    
+    private float timeBetweenShots;
+    public float startTimeBetweenShots;
 
-    public Transform player;
+    public GameObject projectile;
+    private Transform player;
+
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        timeBetweenShots = startTimeBetweenShots;
     }
 
     
@@ -29,6 +36,16 @@ public class EnemyShoot : MonoBehaviour
         } else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
+
+        if (timeBetweenShots <= 0)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBetweenShots = startTimeBetweenShots;
+        }
+        else
+        {
+            timeBetweenShots -= Time.deltaTime;
         }
     }
 }
