@@ -298,6 +298,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1119467639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255546, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725081500937255547, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: m_Name
+      value: PauseMenu
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
 --- !u!1 &1288173976
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +404,6 @@ MonoBehaviour:
     volume: 0.3
     pitch: 1
     loop: 1
-    playOnAwake: 1
     spatialBlend: 0
     minDistance: 10
     maxDistance: 500
