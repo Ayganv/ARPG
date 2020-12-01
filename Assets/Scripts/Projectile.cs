@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour
     
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
         if (transform.position.x == target.x && transform.position.y == target.y)
         {
@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("player"))
+        if (other.CompareTag("Player"))
         {
             DestroyProjectile();
         }
