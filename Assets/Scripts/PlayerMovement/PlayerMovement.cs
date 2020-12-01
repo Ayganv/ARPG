@@ -5,12 +5,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool physics;
     public float movementSpeed;
     public float rotationSpeed;
 
+    private Rigidbody rb;
+    private void Start()
+    {
+        if (physics) rb = GetComponent<Rigidbody>();
+    }
+
     private void Update()
     {
-        BasicWasdMovement();
+        if (physics)
+        {
+            if (Input.GetKey(KeyCode.W)) rb.AddForce((transform.forward * movementSpeed));
+            if (Input.GetKey(KeyCode.S)) rb.AddForce((-transform.forward * movementSpeed));
+            if (Input.GetKey(KeyCode.A)) rb.AddForce((-transform.right * movementSpeed));
+            if (Input.GetKey(KeyCode.D)) rb.AddForce((transform.right * movementSpeed));
+            
+        }
+        else
+        {
+            BasicWasdMovement();
+        }
+        
     }
 
     void BasicWasdMovement()
