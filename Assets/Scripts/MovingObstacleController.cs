@@ -17,7 +17,7 @@ public class MovingObstacleController : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         Vector3 distance = cube.position - plane.position ;
-        Debug.Log(distance);
+        //Debug.Log(distance);
         
         if (distance.z > 20){
             direction = Vector3.back;
