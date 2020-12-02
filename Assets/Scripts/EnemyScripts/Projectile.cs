@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     private Transform player;
     private Vector3 target;
 
+    public float damageToInflict;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -19,18 +20,28 @@ public class Projectile : MonoBehaviour
     
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        ProjectileTarget(target);
 
-        if (transform.position.x == target.x && transform.position.y == target.y)
+        /*if (transform.position.x == target.x && transform.position.y == target.y)
         {
             DestroyProjectile();
-        }
+        }*/
+    }
+
+    void ProjectileTarget(Vector3 activeTarget)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, activeTarget, speed * Time.deltaTime); 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Wall"))
+        if (other.CompareTag("Wall"))
         {
+            DestroyProjectile();
+        }
+        if (other.CompareTag("Player"))
+        {
+            FindObjectOfType<PlayerHealth>().TakeDamage(damageToInflict);
             DestroyProjectile();
         }
     }

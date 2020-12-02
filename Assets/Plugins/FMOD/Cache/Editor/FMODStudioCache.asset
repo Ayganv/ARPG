@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637424307651816373
+  lastModified: 637424300428496228
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -34,7 +34,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637424307651806400
+  lastModified: 637424300428476379
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -158,7 +158,7 @@ MonoBehaviour:
   - {fileID: -7584015134345753589}
   StringsBanks:
   - {fileID: -8261944134119576650}
-  stringsBankWriteTime: 637424307651816373
+  stringsBankWriteTime: 637424300428496228
   cacheVersion: 5
 --- !u!114 &1024504777168859573
 MonoBehaviour:
