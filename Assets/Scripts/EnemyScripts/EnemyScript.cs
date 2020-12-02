@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShoot : MonoBehaviour
-{
+public class EnemyScript : MonoBehaviour
+{   public GameObject projectile;
+    public LayerMask obstacleMask;
+    
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
-    
-    private float timeBetweenShots;
     public float startTimeBetweenShots;
-
-    public GameObject projectile;
+    public float viewRadius;
+    public bool EnemyIsRanged = false;
+    
+    private bool PlayerInRange = false;
+    private float timeBetweenShots;
     private Transform player;
 
 
@@ -20,10 +23,40 @@ public class EnemyShoot : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         timeBetweenShots = startTimeBetweenShots;
+        
     }
 
     
-    void Update()
+    void FixedUpdate()
+    {
+        
+        if (EnemyIsRanged)
+        {
+            RangedUnit();
+        }
+        else //melee method
+        
+        if (PlayerSpotted())
+        {
+            PlayerInRange = true;
+        }
+       
+    }
+    
+    bool PlayerSpotted()
+    {
+        if (Vector3.Distance(transform.position, player.position) < viewRadius)
+        {
+            if (!Physics.Linecast(transform.position, player.position, obstacleMask))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void RangedUnit()
     {
         if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
@@ -47,5 +80,10 @@ public class EnemyShoot : MonoBehaviour
         {
             timeBetweenShots -= Time.deltaTime;
         }
+    }
+
+    private void MeleeUnit()
+    {
+        
     }
 }
