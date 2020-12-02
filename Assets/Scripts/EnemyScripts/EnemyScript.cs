@@ -34,7 +34,7 @@ public class EnemyScript : MonoBehaviour
         {
             RangedUnit();
         }
-        else //melee method
+        else MeleeUnit();
         
         if (PlayerSpotted())
         {
@@ -84,6 +84,7 @@ public class EnemyScript : MonoBehaviour
 
     private void MeleeUnit()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        //needs reference to player health for attacking
     }
 }
