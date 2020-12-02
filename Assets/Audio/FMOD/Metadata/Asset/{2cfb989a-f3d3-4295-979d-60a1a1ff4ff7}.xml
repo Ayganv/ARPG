@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{2cfb989a-f3d3-4295-979d-60a1a1ff4ff7}">
+		<property name="assetPath">
+			<value>AV Ljudbank/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a575bd24-9aa9-4adb-a8be-0f823d532de4}</destination>
+		</relationship>
+	</object>
+</objects>
