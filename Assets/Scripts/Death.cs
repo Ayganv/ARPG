@@ -26,6 +26,7 @@ public class Death : MonoBehaviour
             dead = true;
             GameObject.FindWithTag("Player").SetActive(false);
             gameover.SetActive(true);
+            
         }
         else
         {
