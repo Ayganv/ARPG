@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Revive : MonoBehaviour
 {
-    public GameObject gameover;
-
     public void ReviveButtom()
     {
         FindObjectOfType<Death>().Die(playerMovement: true, velocity: Vector3.zero, angularVelocity: Vector3.zero,
