@@ -21,6 +21,7 @@ public class PlayerInteract : MonoBehaviour
         if(Input.GetKeyDown(InteractionKey) && CanInteract){
 
             Debug.Log($"You have interacted with {ClosestInteractableObject.name}");
+            
             ClosestInteractableObject.GetComponent<Interactable>().Interact();
         }
     }
@@ -29,17 +30,14 @@ public class PlayerInteract : MonoBehaviour
 
         foreach (var interactable in FindObjectsOfType<Interactable>())
         {
-            if(Vector3.Distance(transform.position, interactable.transform.position) <= InteractionDistance){
+            if(ClosestInteractableObject == null){
 
-                if(ClosestInteractableObject == null){
+                ClosestInteractableObject = interactable.gameObject;
+                break;
+            }else if(Vector3.Distance(transform.position, interactable.transform.position) < Vector3.Distance(transform.position, ClosestInteractableObject.transform.position)){
 
-                    ClosestInteractableObject = interactable.gameObject;
-                    break;
-                }else if(Vector3.Distance(transform.position, interactable.transform.position) < Vector3.Distance(transform.position, ClosestInteractableObject.transform.position)){
-
-                    ClosestInteractableObject = interactable.gameObject;
-                    break;
-                }
+                ClosestInteractableObject = interactable.gameObject;
+                break;
             }
         }
     }
