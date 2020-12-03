@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637424304600817115
+  lastModified: 637424300428496228
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -34,7 +34,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637424304600817115
+  lastModified: 637424300428476379
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -80,7 +80,7 @@ MonoBehaviour:
   ID:
     data1: 2444786405
     data2: 1411253166
-  Exists: 0
+  Exists: 1
 --- !u!114 &-4401264861649990064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,12 +149,16 @@ MonoBehaviour:
   - {fileID: 9149071360792831420}
   - {fileID: 2217178692350458762}
   - {fileID: 4552949612892250424}
-  EditorParameters: []
+  EditorParameters:
+  - {fileID: -4441897317537437239}
+  - {fileID: 7571039248445567445}
+  - {fileID: 1024504777168859573}
+  - {fileID: 5915431200191627183}
   MasterBanks:
   - {fileID: -7584015134345753589}
   StringsBanks:
   - {fileID: -8261944134119576650}
-  stringsBankWriteTime: 637424304600817115
+  stringsBankWriteTime: 637424300428496228
   cacheVersion: 5
 --- !u!114 &1024504777168859573
 MonoBehaviour:
@@ -175,7 +179,7 @@ MonoBehaviour:
   ID:
     data1: 3396733501
     data2: 2887589395
-  Exists: 0
+  Exists: 1
 --- !u!114 &2217178692350458762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +245,7 @@ MonoBehaviour:
   ID:
     data1: 1184713078
     data2: 3235288305
-  Exists: 0
+  Exists: 1
 --- !u!114 &7571039248445567445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +265,7 @@ MonoBehaviour:
   ID:
     data1: 1737119872
     data2: 878650848
-  Exists: 0
+  Exists: 1
 --- !u!114 &9149071360792831420
 MonoBehaviour:
   m_ObjectHideFlags: 0

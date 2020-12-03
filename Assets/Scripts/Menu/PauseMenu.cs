@@ -63,9 +63,4 @@ public class PauseMenu : MonoBehaviour
         ToggleMenu(false);
         SceneManager.LoadScene(Index);
     }
-
-    public void QuitGame(){
-
-        Application.Quit();
-    }
 }
