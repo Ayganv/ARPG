@@ -5,42 +5,48 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {   public GameObject projectile;
     public LayerMask obstacleMask;
+    //public PlayerHealth playerHealth;
     
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
-    public float startTimeBetweenShots;
+    public float startTimeBetweenAttack;
     public float viewRadius;
+    public int meeleDamage = 2;
     public bool EnemyIsRanged = false;
+    
     
     private bool PlayerInRange = false;
     private float timeBetweenShots;
     private Transform player;
+    
 
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        timeBetweenShots = startTimeBetweenShots;
+        
+        timeBetweenShots = startTimeBetweenAttack;
         
     }
 
     
     void FixedUpdate()
     {
-        
-        if (EnemyIsRanged)
+        if (PlayerInRange)
         {
-            RangedUnit();
+            if (EnemyIsRanged)
+            {
+                RangedUnit();
+            }
+            else MeleeUnit();
         }
-        else MeleeUnit();
-        
+
         if (PlayerSpotted())
         {
             PlayerInRange = true;
         }
-       
+        else PlayerInRange = false;
     }
     
     bool PlayerSpotted()
@@ -52,7 +58,6 @@ public class EnemyScript : MonoBehaviour
                 return true;
             }
         }
-
         return false;
     }
 
@@ -74,7 +79,7 @@ public class EnemyScript : MonoBehaviour
         if (timeBetweenShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
-            timeBetweenShots = startTimeBetweenShots;
+            timeBetweenShots = startTimeBetweenAttack;
         }
         else
         {
@@ -84,7 +89,24 @@ public class EnemyScript : MonoBehaviour
 
     private void MeleeUnit()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
+
+        else
+        {
+            if (timeBetweenShots <= 0)
+            {
+                FindObjectOfType<PlayerHealth>().TakeDamage(meeleDamage);
+                timeBetweenShots = startTimeBetweenAttack;
+            }
+            else
+            {
+                timeBetweenShots -= Time.deltaTime;
+            }
+        }
+
         //needs reference to player health for attacking
     }
 }

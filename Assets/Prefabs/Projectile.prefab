@@ -109,9 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3507573b97a4bd4196c580bed2e9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   followingProjectile: 1
-  damageToInflict: 1
+  damageToInflict: 2
 --- !u!54 &4351453391568251642
 Rigidbody:
   m_ObjectHideFlags: 0
