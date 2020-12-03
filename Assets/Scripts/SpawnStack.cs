@@ -24,9 +24,7 @@ public class Spawn
 }
 public class SpawnStack : MonoBehaviour
 {
-    // Start is called before the first frame update
     
-
     private Stack<Spawn> Stack = new Stack<Spawn>();
     public GameObject SpawnTask;
     public string objective; 
@@ -34,7 +32,7 @@ public class SpawnStack : MonoBehaviour
 
     public void AddSpawn(Vector3 position)
     {
-        this.Stack.Push(new Spawn(position, $"spawn {this.Stack.Count}"));
+        this.Stack.Push(new Spawn(position, $"attempt {this.Stack.Count}"));
         this.WriteSpawnTask();
     }
     public void WriteSpawnTask()

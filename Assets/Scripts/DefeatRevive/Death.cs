@@ -24,8 +24,9 @@ public class Death : MonoBehaviour
         if (Health == 0)
         {
             dead = true;
-            GameObject.FindWithTag("Player").SetActive(false);
+            GameObject.FindWithTag("Player").GetComponentInParent<playerMovement>().Equals(false);
             gameover.SetActive(true);
+            
         }
         else
         {
@@ -34,15 +35,11 @@ public class Death : MonoBehaviour
     }
 
 
-    public void ReviveButtom()
-    {
-        GameObject.FindWithTag("Player").SetActive(true);
-        gameover.SetActive(false);
-    }
-
-
     public void KillButtom()
     {
-        Health -= 100;
+        if (Health > 0)
+        {
+            Health -= 50;
+        }
     }
 }
