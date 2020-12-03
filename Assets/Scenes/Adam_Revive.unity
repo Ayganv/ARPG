@@ -531,7 +531,6 @@ GameObject:
   - component: {fileID: 509346020}
   - component: {fileID: 509346019}
   - component: {fileID: 509346018}
-  - component: {fileID: 509346021}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -652,21 +651,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509346016}
   m_CullTransparentMesh: 0
---- !u!114 &509346021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509346016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7dc97a4a8b38a84b832621044315a8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dead: 0
-  gameover: {fileID: 342137188}
-  Health: 100
 --- !u!1 &762473823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -397, y: -240}
+  m_AnchoredPosition: {x: -310.1, y: -198.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &987237769
@@ -1066,7 +1050,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1834139788}
+      - m_Target: {fileID: 762473824}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
         m_MethodName: KillButtom
         m_Mode: 1
@@ -1398,7 +1382,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1834139789}
-  - component: {fileID: 1834139788}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1406,21 +1389,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1834139788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834139787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7dc97a4a8b38a84b832621044315a8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dead: 0
-  gameover: {fileID: 342137188}
-  Health: 100
 --- !u!4 &1834139789
 Transform:
   m_ObjectHideFlags: 0
@@ -1543,4 +1511,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthTxt: {fileID: 1938196709}
-  Death: {fileID: 1834139788}
+  Death: {fileID: 762473824}
