@@ -34,7 +34,6 @@ public class Death : MonoBehaviour
             GameObject.FindWithTag("Player").GetComponent<Rigidbody>().velocity = Vector3.zero;
             GameObject.FindWithTag("Player").GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             gameover.SetActive(true);
-            
         }
     }
 
