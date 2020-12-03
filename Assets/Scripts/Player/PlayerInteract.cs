@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerInteract : MonoBehaviour
 {   
@@ -10,11 +11,18 @@ public class PlayerInteract : MonoBehaviour
     [Header("Interaction Settings")]
     public float InteractionDistance;
 
+    private Interactable InteractableTarget;
+
     private GameObject ClosestInteractableObject; 
 
     private bool CanInteract => ClosestInteractableObject != null && Vector3.Distance(transform.position, ClosestInteractableObject.transform.position) <= InteractionDistance;
 
     private void Update() {
+
+        if(Input.GetMouseButtonDown(0)){
+
+            GetInteractableTarget();
+        }
 
         UpdateClosestInteractableobject();
 
@@ -40,5 +48,18 @@ public class PlayerInteract : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void GetInteractableTarget(){
+
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit)){
+
+            InteractableTarget = hit.collider.gameObject.GetComponent<Interactable>();
+        }
+
+        Debug.Log(InteractableTarget);
     }
 }
