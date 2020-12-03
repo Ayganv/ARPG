@@ -10,7 +10,8 @@ public class Revive : MonoBehaviour
 
     public void ReviveButtom()
     {
-        FindObjectOfType<Death>().Die(playerm: true, velocity: Vector3.one, angularvel: Vector3.one, GameOver: false);
+        FindObjectOfType<Death>().Die(playerMovement: true, velocity: Vector3.one, angularVelocity: Vector3.one,
+            gameOver: false);
         GameObject.FindWithTag("Player").GetComponent<Death>().Health += 100;
         activeOrNot = true;
     }

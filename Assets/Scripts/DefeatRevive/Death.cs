@@ -8,23 +8,27 @@ public class Death : MonoBehaviour
     public bool dead = false;
     public GameObject gameover;
     public int Health = 100;
+    private Revive Revive;
+    private GameObject Player;
 
     private void Start()
     {
         gameover.SetActive(false);
         Health = 100;
+        Revive = FindObjectOfType<Revive>();
+        Player = GameObject.FindWithTag("Player");
     }
 
     private void Update()
     {
-        if (FindObjectOfType<Revive>().activeOrNot == true)
+        if (Revive.activeOrNot)
         {
             gameover.SetActive(false);
         }
 
         if (Health == 0)
         {
-            Die(playerm: false, Vector3.one, Vector3.one, true);
+            Die(false, Vector3.zero, Vector3.zero, true);
         }
     }
 
@@ -41,13 +45,13 @@ public class Death : MonoBehaviour
         }
     }
  */
-    public void Die(bool playerm, Vector3 velocity, Vector3 angularvel, bool GameOver)
+    public void Die(bool playerMovement, Vector3 velocity, Vector3 angularVelocity, bool gameOver)
     {
         dead = true;
-        GameObject.FindWithTag("Player").GetComponent<playerMovement>().enabled = playerm;
-        GameObject.FindWithTag("Player").GetComponent<Rigidbody>().velocity = velocity;
-        GameObject.FindWithTag("Player").GetComponent<Rigidbody>().angularVelocity = angularvel;
-        gameover.SetActive(GameOver);
+        Player.GetComponent<playerMovement>().enabled = playerMovement;
+        Player.GetComponent<Rigidbody>().velocity = velocity;
+        Player.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
+        gameover.SetActive(gameOver);
     }
 
 
