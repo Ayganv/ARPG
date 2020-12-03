@@ -21,11 +21,6 @@ public class Death : MonoBehaviour
 
     private void Update()
     {
-        if (Revive.activeOrNot)
-        {
-            gameover.SetActive(false);
-        }
-
         if (Health == 0)
         {
             Die(false, Vector3.zero, Vector3.zero, true);
