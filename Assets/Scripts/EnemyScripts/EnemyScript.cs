@@ -47,7 +47,6 @@ public class EnemyScript : MonoBehaviour
             PlayerInRange = true;
         }
         else PlayerInRange = false;
-
     }
     
     bool PlayerSpotted()
@@ -59,7 +58,6 @@ public class EnemyScript : MonoBehaviour
                 return true;
             }
         }
-
         return false;
     }
 
