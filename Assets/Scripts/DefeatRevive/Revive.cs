@@ -1,30 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Configuration;
 using UnityEngine;
 
 public class Revive : MonoBehaviour
 {
-
     public GameObject gameover;
+    public bool activeOrNot = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public void ReviveButtom()
     {
-        GameObject.FindWithTag("Player").SetActive(true);
-        FindObjectOfType<Death>().Health = 100;
-        gameover.SetActive(false);
+        GameObject.FindWithTag("Player").GetComponent<playerMovement>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<Rigidbody>().velocity = Vector3.one;
+        GameObject.FindWithTag("Player").GetComponent<Rigidbody>().angularVelocity = Vector3.one;
+        GameObject.FindWithTag("Player").GetComponent<Death>().Health += 100;
+        activeOrNot = true;
     }
-
-    
 }

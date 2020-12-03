@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-
     public Text healthTxt;
     public Death Death;
-    
+
     void Update()
     {
         this.healthTxt.text = $@"Health: {(Death.Health)}";
