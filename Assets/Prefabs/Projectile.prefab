@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  followingProjectile: 1
   damageToInflict: 1
 --- !u!54 &4351453391568251642
 Rigidbody:
