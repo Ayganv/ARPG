@@ -8,25 +8,46 @@ public class PlayerInteract : MonoBehaviour
     [Header("Player Interaction Key")]
     public KeyCode InteractionKey;
 
-    [Header("Interaction Settings")]
-    public float InteractionDistance;
-
     private Interactable InteractableTarget;
 
     private GameObject ClosestInteractableObject; 
 
-    private bool CanInteract => ClosestInteractableObject != null && Vector3.Distance(transform.position, ClosestInteractableObject.transform.position) <= InteractionDistance;
+    private NavMeshAgent agent => GetComponent<NavMeshAgent>();
+
+    private bool MovingToInteract = false;
+
+    private bool CanInteract(){
+
+        if(InteractableTarget == null){
+
+            return false;
+        }
+
+        if(Vector3.Distance(transform.position, ClosestInteractableObject.transform.position) <= InteractableTarget.InteractionDistance){
+
+            return true;
+        }else{
+
+            return false;
+        }
+    }
 
     private void Update() {
 
         if(Input.GetMouseButtonDown(0)){
-
+            
             GetInteractableTarget();
+        }
+
+        if(CanInteract() && MovingToInteract){
+
+            InteractableTarget.Interact();
+            MovingToInteract = false;
         }
 
         UpdateClosestInteractableobject();
 
-        if(Input.GetKeyDown(InteractionKey) && CanInteract){
+        if(Input.GetKeyDown(InteractionKey) && CanInteract()){
 
             Debug.Log($"You have interacted with {ClosestInteractableObject.name}");
             
@@ -41,10 +62,12 @@ public class PlayerInteract : MonoBehaviour
             if(ClosestInteractableObject == null){
 
                 ClosestInteractableObject = interactable.gameObject;
+                InteractableTarget = interactable;
                 break;
             }else if(Vector3.Distance(transform.position, interactable.transform.position) < Vector3.Distance(transform.position, ClosestInteractableObject.transform.position)){
 
                 ClosestInteractableObject = interactable.gameObject;
+                InteractableTarget = interactable;
                 break;
             }
         }
@@ -58,8 +81,13 @@ public class PlayerInteract : MonoBehaviour
         if (Physics.Raycast(ray, out hit)){
 
             InteractableTarget = hit.collider.gameObject.GetComponent<Interactable>();
+            MoveToTarget(hit.point);
         }
+    }   
 
-        Debug.Log(InteractableTarget);
+    private void MoveToTarget(Vector3 targetPosition){
+
+        MovingToInteract = true;
+        agent.SetDestination(targetPosition);
     }
 }

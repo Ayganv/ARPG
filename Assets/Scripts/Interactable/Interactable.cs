@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
+    public float InteractionDistance;
+
     [Header("Unity Event")]
     public UnityEvent OnInteract;
 
