@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376363477}
     m_Modifications:
+    - target: {fileID: 525659190827231521, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 525659190827231522, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
       propertyPath: plane
       value: 
@@ -185,6 +189,10 @@ PrefabInstance:
     - target: {fileID: 525659190827231527, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820965225945965827, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+      propertyPath: m_CarveOnlyStationary
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
@@ -503,7 +511,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7e712dedcda65ad47a6f6c87e606105d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -853,6 +861,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376363477}
     m_Modifications:
+    - target: {fileID: 525659190827231521, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 525659190827231522, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
       propertyPath: plane
       value: 
@@ -908,6 +920,10 @@ PrefabInstance:
     - target: {fileID: 525659190827231527, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820965225945965827, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+      propertyPath: m_CarveOnlyStationary
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
@@ -981,6 +997,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376363477}
     m_Modifications:
+    - target: {fileID: 525659190827231521, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 525659190827231522, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
       propertyPath: plane
       value: 
@@ -1036,6 +1056,10 @@ PrefabInstance:
     - target: {fileID: 525659190827231527, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820965225945965827, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+      propertyPath: m_CarveOnlyStationary
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
@@ -1174,6 +1198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376363477}
     m_Modifications:
+    - target: {fileID: 525659190827231521, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 525659190827231522, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
       propertyPath: plane
       value: 
@@ -1229,6 +1257,10 @@ PrefabInstance:
     - target: {fileID: 525659190827231527, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820965225945965827, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+      propertyPath: m_CarveOnlyStationary
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}

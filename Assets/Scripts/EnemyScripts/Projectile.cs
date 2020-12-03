@@ -10,8 +10,6 @@ public class Projectile : MonoBehaviour
     private Transform player;
     private Vector3 target;
 
-    public bool followingProjectile;
-
     public float damageToInflict;
     void Start()
     {
@@ -22,21 +20,19 @@ public class Projectile : MonoBehaviour
     
     void Update()
     {
-        if (followingProjectile == false)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); 
-        }
-        else if (followingProjectile == true)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime); 
-        }
-        
-        if (transform.position.x == target.x && transform.position.y == target.y && transform.position.z == target.z)
+        ProjectileTarget(target);
+
+        /*if (transform.position.x == target.x && transform.position.y == target.y)
         {
             DestroyProjectile();
-        }
+        }*/
     }
-    
+
+    void ProjectileTarget(Vector3 activeTarget)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, activeTarget, speed * Time.deltaTime); 
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Wall"))
@@ -54,4 +50,5 @@ public class Projectile : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    
 }
