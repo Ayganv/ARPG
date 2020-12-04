@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: c212626a4a5758b489b7204d8dcfe520, type: 2}
---- !u!114 &23840707 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1204866061940886029, guid: 44f72f281613af5458a5a8c0c5c16eae, type: 3}
-  m_PrefabInstance: {fileID: 672246371}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ddb809e6afb944a85e11caf335fe14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &24706234
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,8 +643,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 23840707}
-        m_TargetAssemblyTypeName: PlayerHealthWithDeathRespawn, Assembly-CSharp
+      - m_Target: {fileID: 1036232898}
+        m_TargetAssemblyTypeName: MaxRespawn, Assembly-CSharp
         m_MethodName: ReviveButton
         m_Mode: 1
         m_Arguments:
@@ -1405,6 +1394,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961500536}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1036232898 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1983640291943621902, guid: 44f72f281613af5458a5a8c0c5c16eae, type: 3}
+  m_PrefabInstance: {fileID: 672246371}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec2b32b6d9dce747a39cad1772736ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1189113399
 GameObject:
   m_ObjectHideFlags: 0
