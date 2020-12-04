@@ -11,7 +11,7 @@ namespace CameraController
         public bool TargetIsPlayer;
 
         [Space]
-        public Transform CameraFocus;
+        public Transform CameraObject;
 
         [Header("Camera Zoom Settings")]
         public bool CameraCanZoom = true;
@@ -20,9 +20,7 @@ namespace CameraController
         public float ZoomSpeed;
 
         [Space]
-        public float ZoomMin;
-
-        public float ZoomMax;
+        public Vector2 ZoomDistanceMinMax = new Vector2(5, 30);
 
         [Header("Camera Offset Settings")]
         public Vector3 PositionOffset;
@@ -40,10 +38,12 @@ namespace CameraController
             {
                 Target = GameObject.FindGameObjectWithTag("Player").transform;
             }
-            else if (!TargetIsPlayer)
+            else if (Target == null && !TargetIsPlayer)
             {
                 Debug.LogError("Camera Has No Target");
             }
+
+            SetupStartingPosition();
         }
 
         private void LateUpdate()
@@ -53,7 +53,7 @@ namespace CameraController
                 UpdateZoom();
             }
 
-            UpdateCameraPosition();
+            FollowPlayer();
 
             UpdateCameraRotation();
         }
@@ -61,33 +61,33 @@ namespace CameraController
         private void UpdateZoom()
         {
             float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-            float distance = Vector3.Distance(Target.position, transform.position);
+            float distance = Vector3.Distance(Target.position, CameraObject.position);
 
-            if (distance < ZoomMin && scrollInput > 0)
+            if (distance <= ZoomDistanceMinMax.x && scrollInput > 0)
             {
                 return;
             }
-            else if (distance > ZoomMax && scrollInput < 0)
+            else if (distance >= ZoomDistanceMinMax.y && scrollInput < 0)
             {
                 return;
             }
 
-            transform.position += transform.forward * scrollInput * ZoomSpeed;
+            CameraObject.position += CameraObject.forward * scrollInput * ZoomSpeed;
         }
 
-        private void UpdateCameraPosition()
+        private void FollowPlayer()
         {
-            CameraFocus.position = Vector3.Lerp(CameraFocus.position, GetDesiredPosition(Target.position), CameraSpeed);
+            transform.position = Vector3.Lerp(transform.position, Target.position, CameraSpeed);
+        }
+
+        private void SetupStartingPosition()
+        {
+            CameraObject.position = PositionOffset;
         }
 
         private void UpdateCameraRotation()
         {
-            CameraFocus.rotation = RotationOffset;
-        }
-
-        private Vector3 GetDesiredPosition(Vector3 TargetPositon)
-        {
-            return TargetPositon + PositionOffset;
+            transform.rotation = RotationOffset;
         }
     }
 }

@@ -1,90 +1,57 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class PlayerInteract : MonoBehaviour
+namespace Interaction
 {
-    private Interactable InteractableTarget;
+    public class PlayerInteract : MonoBehaviour
+    {
+        private List<Interactable> interactables = new List<Interactable>();
 
-    private GameObject ClosestInteractableObject; 
+        private Interactable ClosestInteractable;
 
-    private NavMeshAgent agent => GetComponent<NavMeshAgent>();
+        private bool WithinInteractionDistance => Vector3.Distance(transform.position, ClosestInteractable.transform.position) <= ClosestInteractable.InteractionDistance;
 
-    private bool MovingToInteract = false;
+        private bool CanInteract => ClosestInteractable != null && WithinInteractionDistance;
 
-    private bool CanInteract(){
-
-        if(InteractableTarget == null){
-
-            return false;
-        }
-
-        if(Vector3.Distance(transform.position, ClosestInteractableObject.transform.position) <= InteractableTarget.InteractionDistance){
-
-            return true;
-        }else{
-
-            return false;
-        }
-    }
-
-    private void Update() {
-
-        if(Input.GetMouseButtonDown(0)){
-            
-            GetInteractableTarget();
-        }
-
-        if(CanInteract() && MovingToInteract){
-
-            InteractableTarget.Interact();
-            MovingToInteract = false;
-        }
-
-        UpdateClosestInteractableobject();
-
-        if(InteractableTarget != null && Input.GetKeyDown(InteractableTarget.InteractionKey) && CanInteract()){
-
-            Debug.Log($"You have interacted with {ClosestInteractableObject.name}");
-            
-            ClosestInteractableObject.GetComponent<Interactable>().Interact();
-        }
-    }
-
-    public void UpdateClosestInteractableobject(){
-
-        foreach (var interactable in FindObjectsOfType<Interactable>())
+        private void Awake()
         {
-            if(ClosestInteractableObject == null){
+            GetAllInteractables();
+        }
 
-                ClosestInteractableObject = interactable.gameObject;
-                InteractableTarget = interactable;
-                break;
-            }else if(Vector3.Distance(transform.position, interactable.transform.position) < Vector3.Distance(transform.position, ClosestInteractableObject.transform.position)){
+        private void Update()
+        {
+            GetClosestInteractableObject();
 
-                ClosestInteractableObject = interactable.gameObject;
-                InteractableTarget = interactable;
-                break;
+            if (CanInteract && Input.GetKeyDown(ClosestInteractable.InteractionKey))
+            {
+                ClosestInteractable.Interact();
+                Debug.Log($"Player has interacted with {ClosestInteractable}");
             }
         }
-    }
 
-    public void GetInteractableTarget(){
+        private void GetClosestInteractableObject()
+        {
+            foreach (var interactable in interactables)
+            {
+                if (ClosestInteractable == null)
+                {
+                    ClosestInteractable = interactable;
+                }
 
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit)){
-
-            InteractableTarget = hit.collider.gameObject.GetComponent<Interactable>();
-            MoveToTarget(hit.point);
+                if (Vector3.Distance(transform.position, interactable.transform.position) <= Vector3.Distance(transform.position, ClosestInteractable.transform.position))
+                {
+                    ClosestInteractable = interactable;
+                }
+            }
         }
-    }   
 
-    private void MoveToTarget(Vector3 targetPosition){
-
-        MovingToInteract = true;
-        agent.SetDestination(targetPosition);
+        private void GetAllInteractables()
+        {
+            foreach (var interactable in FindObjectsOfType<Interactable>())
+            {
+                interactables.Add(interactable);
+            }
+        }
     }
 }

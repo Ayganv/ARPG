@@ -1322,6 +1322,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCameraController
       objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: PositionOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: PositionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: PositionOffset.z
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: RotationOffset.w
+      value: 0.85355335
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: RotationOffset.x
+      value: 0.3535534
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: RotationOffset.y
+      value: 0.3535534
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: RotationOffset.z
+      value: -0.14644663
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
 --- !u!1 &1786362888

@@ -10,8 +10,5 @@ public class ThreatCircle : Editor {
         Enemy fow = (Enemy)target;
         Handles.color = Color.white;
         Handles.DrawWireArc (fow.transform.position, Vector3.up, Vector3.forward, 360, fow.ViewRadius);
-        
-        
     }
-
 }
