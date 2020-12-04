@@ -36,9 +36,6 @@ public class PatrollingEnemy : MonoBehaviour {
         }
         else Attack();
 
-        //if (Vector3.Distance())
-        Patrol();
-
     }
 
     void Patrol() 

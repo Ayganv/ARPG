@@ -76,21 +76,7 @@ public class Enemy : MonoBehaviour
         return false;
     }
 
-    private void RangedUnitMovement()
-    {
-        if (Vector3.Distance(transform.position, player.position) > StoppingDistance)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, MovementSpeed * Time.deltaTime);
-        }
-        else if (Vector3.Distance(transform.position, player.position) < StoppingDistance && Vector3.Distance(transform.position, player.position) > RetreatDistance)
-        {
-            transform.position = this.transform.position;
-        }
-        else if (Vector3.Distance(transform.position, player.position) < RetreatDistance)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, -MovementSpeed * Time.deltaTime);
-        }
-    }
+    
 
     private void MeleeUnitMovement()
     {
@@ -128,6 +114,20 @@ public class Enemy : MonoBehaviour
             timeSinceLastAttack -= Time.deltaTime;
         }
     }
-
+private void RangedUnitMovement()
+    {
+        if (Vector3.Distance(transform.position, player.position) > StoppingDistance)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, MovementSpeed * Time.deltaTime);
+        }
+        else if (Vector3.Distance(transform.position, player.position) < StoppingDistance && Vector3.Distance(transform.position, player.position) > RetreatDistance)
+        {
+            transform.position = this.transform.position;
+        }
+        else if (Vector3.Distance(transform.position, player.position) < RetreatDistance)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, -MovementSpeed * Time.deltaTime);
+        }
+    }
     //needs reference to player health for attacking
 }
