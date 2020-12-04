@@ -7,9 +7,15 @@ using UnityEngine.UI;
 public class UiText : MonoBehaviour
 {
     public Text healthText;
+    private PlayerHealth playerHealth;
+
+    private void Start()
+    {
+        playerHealth = FindObjectOfType<PlayerHealth>();
+    }
 
     private void Update()
     {
-        healthText.text = "Health: " + FindObjectOfType<PlayerHealthWithDeath>().health;
+        healthText.text = "Health: " + playerHealth.health;
     }
 }
