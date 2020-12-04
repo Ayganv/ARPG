@@ -47,15 +47,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a014dc25c4f0394f92271bb878dc934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 647039571449919212, guid: be275b4c90c817941b1e63bd23f9ed33, type: 3}
-  IsRanged: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
-  MovementSpeed: 10
-  StoppingDistance: 2
-  RetreatDistance: 5
-  ViewRadius: 180
+  MovementSpeed: 5
+  StoppingDistance: 5
+  RetreatDistance: 4
+  ViewRadius: 10
+  IsRanged: 1
+  projectile: {fileID: 647039571449919212, guid: be275b4c90c817941b1e63bd23f9ed33, type: 3}
   TimeBetweenAttack: 1
   MeleeDamage: 2
 --- !u!33 &5497684250067755107
