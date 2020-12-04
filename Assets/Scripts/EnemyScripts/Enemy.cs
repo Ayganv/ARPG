@@ -1,42 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{   public GameObject projectile;
+{
+    [Header("Movement Behaviour Settings")]
     public LayerMask obstacleMask;
+
     [Space]
     public float MovementSpeed;
+
     [Space]
     public float StoppingDistance;
+
     public float RetreatDistance;
     public float ViewRadius;
+
+    [Header("Combat Settings")]
+    public bool IsRanged = false;
+
+    public GameObject projectile;
+
     [Space]
     public float TimeBetweenAttack;
+
     public int MeleeDamage = 2;
-    public bool EnemyIsRanged = false;
 
     private bool playerInRange = false;
     private float timeSinceLastAttack;
+
     private Transform player;
     private PlayerHealth playerHealth;
-    
 
-
-    void Start()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerHealth = FindObjectOfType<PlayerHealth>(); 
+        playerHealth = FindObjectOfType<PlayerHealth>();
         timeSinceLastAttack = TimeBetweenAttack;
-        
     }
 
-    
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (playerInRange)
         {
-            if (EnemyIsRanged)
+            if (IsRanged)
             {
                 RangedUnitMovement();
                 RangedAttack();
@@ -52,10 +57,13 @@ public class Enemy : MonoBehaviour
         {
             playerInRange = true;
         }
-        else playerInRange = false;
+        else
+        {
+            playerInRange = false;
+        }
     }
-    
-    bool PlayerSpotted()
+
+    private bool PlayerSpotted()
     {
         if (Vector3.Distance(transform.position, player.position) < ViewRadius)
         {
@@ -64,6 +72,7 @@ public class Enemy : MonoBehaviour
                 return true;
             }
         }
+
         return false;
     }
 
@@ -72,12 +81,12 @@ public class Enemy : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) > StoppingDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, MovementSpeed * Time.deltaTime);
-            
-        } else if (Vector3.Distance(transform.position, player.position) < StoppingDistance && Vector3.Distance(transform.position, player.position) > RetreatDistance)
+        }
+        else if (Vector3.Distance(transform.position, player.position) < StoppingDistance && Vector3.Distance(transform.position, player.position) > RetreatDistance)
         {
             transform.position = this.transform.position;
-            
-        } else if (Vector3.Distance(transform.position, player.position) < RetreatDistance)
+        }
+        else if (Vector3.Distance(transform.position, player.position) < RetreatDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, -MovementSpeed * Time.deltaTime);
         }
@@ -90,7 +99,6 @@ public class Enemy : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.position, MovementSpeed * Time.deltaTime);
         }
     }
-
 
     private void MeleeAttack()
     {
@@ -122,5 +130,4 @@ public class Enemy : MonoBehaviour
     }
 
     //needs reference to player health for attacking
-
 }

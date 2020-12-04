@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6943197452180703732}
+  - component: {fileID: 6084783907446108571}
   - component: {fileID: 6943197452180703733}
   - component: {fileID: 6943197452180703734}
   - component: {fileID: 6943197452180703735}
   - component: {fileID: 6943197452180703736}
-  - component: {fileID: 6943197452180703737}
   m_Layer: 0
   m_Name: MeleeEnemy
   m_TagString: Untagged
@@ -35,6 +35,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6084783907446108571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6943197452180703738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a014dc25c4f0394f92271bb878dc934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  IsRanged: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  MovementSpeed: 0
+  StoppingDistance: 0
+  RetreatDistance: 0
+  ViewRadius: 0
+  TimeBetweenAttack: 0
+  MeleeDamage: 2
 --- !u!33 &6943197452180703733
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -113,26 +136,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6943197452180703737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6943197452180703738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a014dc25c4f0394f92271bb878dc934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 647039571449919212, guid: be275b4c90c817941b1e63bd23f9ed33, type: 3}
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 512
-  speed: 7
-  stoppingDistance: 2
-  retreatDistance: 5
-  startTimeBetweenAttack: 1
-  viewRadius: 8.72
-  meeleDamage: 10
-  EnemyIsRanged: 0

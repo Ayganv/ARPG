@@ -26,20 +26,16 @@ public class Projectile : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); 
         }
-        else if (followingProjectile == true)
+        else if (followingProjectile)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime); 
         }
-        if (transform.position.x == target.x && transform.position.y == target.y && transform.position.z == target.z)
-            DestroyProjectile();
+        if (transform.position == target) DestroyProjectile();
     }
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Wall"))
-        {
-            DestroyProjectile();
-        }
+        if (other.CompareTag("Wall")) DestroyProjectile();
         if (other.CompareTag("Player"))
         {
             FindObjectOfType<PlayerHealth>().TakeDamage(damageToInflict);

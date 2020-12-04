@@ -29,11 +29,16 @@ public class PatrollingEnemy : MonoBehaviour {
             IncreaseIndex();
         }
 
+
         if (Vector3.Distance(transform.position, player.position) > 1.5f)
         {
             Patrol();
         }
         else Attack();
+
+        //if (Vector3.Distance())
+        Patrol();
+
     }
 
     void Patrol() 
