@@ -1773,8 +1773,24 @@ PrefabInstance:
       value: RangedEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 5497684250067755111, guid: 31e26a4dbd3bb764290c03f113b71555, type: 3}
+      propertyPath: ViewRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497684250067755111, guid: 31e26a4dbd3bb764290c03f113b71555, type: 3}
       propertyPath: viewRadius
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497684250067755111, guid: 31e26a4dbd3bb764290c03f113b71555, type: 3}
+      propertyPath: MovementSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497684250067755111, guid: 31e26a4dbd3bb764290c03f113b71555, type: 3}
+      propertyPath: RetreatDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497684250067755111, guid: 31e26a4dbd3bb764290c03f113b71555, type: 3}
+      propertyPath: StoppingDistance
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31e26a4dbd3bb764290c03f113b71555, type: 3}
@@ -1785,6 +1801,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6084783907446108571, guid: 7f3f9f51151f56344aea98e145ede9b1, type: 3}
+      propertyPath: ViewRadius
+      value: 5.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084783907446108571, guid: 7f3f9f51151f56344aea98e145ede9b1, type: 3}
+      propertyPath: MeleeDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084783907446108571, guid: 7f3f9f51151f56344aea98e145ede9b1, type: 3}
+      propertyPath: MovementSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084783907446108571, guid: 7f3f9f51151f56344aea98e145ede9b1, type: 3}
+      propertyPath: StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084783907446108571, guid: 7f3f9f51151f56344aea98e145ede9b1, type: 3}
+      propertyPath: TimeBetweenAttack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6943197452180703732, guid: 7f3f9f51151f56344aea98e145ede9b1, type: 3}
       propertyPath: m_RootOrder
       value: 11

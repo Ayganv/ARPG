@@ -47,17 +47,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a014dc25c4f0394f92271bb878dc934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  IsRanged: 0
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
-  MovementSpeed: 0
-  StoppingDistance: 0
+  MovementSpeed: 7
+  StoppingDistance: 2
   RetreatDistance: 0
-  ViewRadius: 0
-  TimeBetweenAttack: 0
-  MeleeDamage: 2
+  ViewRadius: 5.87
+  IsRanged: 0
+  projectile: {fileID: 0}
+  TimeBetweenAttack: 1
+  MeleeDamage: 10
 --- !u!33 &6943197452180703733
 MeshFilter:
   m_ObjectHideFlags: 0
