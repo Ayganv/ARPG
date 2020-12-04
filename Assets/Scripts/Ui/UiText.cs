@@ -10,6 +10,6 @@ public class UiText : MonoBehaviour
 
     private void Update()
     {
-        healthText.text = "Health: " + FindObjectOfType<PlayerHealthWithDeathRespawn>().health;
+        healthText.text = "Health: " + FindObjectOfType<PlayerHealthWithDeath>().health;
     }
 }

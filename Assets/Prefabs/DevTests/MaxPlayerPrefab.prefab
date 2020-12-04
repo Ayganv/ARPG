@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4855165557911981405}
   - component: {fileID: 173305937619492676}
   - component: {fileID: 1204866061940886029}
+  - component: {fileID: -1983640291943621902}
   m_Layer: 0
   m_Name: MaxPlayerPrefab
   m_TagString: Player
@@ -53,7 +54,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractionKey: 101
-  InteractionDistance: 5
 --- !u!114 &4304335719610202202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,4 +220,16 @@ MonoBehaviour:
   health: 0
   dead: 0
   gameover: {fileID: 0}
+--- !u!114 &-1983640291943621902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4304335719610202204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec2b32b6d9dce747a39cad1772736ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   CurrentSpawn: {x: 0, y: 0, z: 0}
