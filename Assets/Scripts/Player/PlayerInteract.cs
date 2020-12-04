@@ -4,10 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerInteract : MonoBehaviour
-{   
-    [Header("Player Interaction Key")]
-    public KeyCode InteractionKey;
-
+{
     private Interactable InteractableTarget;
 
     private GameObject ClosestInteractableObject; 
@@ -47,7 +44,7 @@ public class PlayerInteract : MonoBehaviour
 
         UpdateClosestInteractableobject();
 
-        if(Input.GetKeyDown(InteractionKey) && CanInteract()){
+        if(InteractableTarget != null && Input.GetKeyDown(InteractableTarget.InteractionKey) && CanInteract()){
 
             Debug.Log($"You have interacted with {ClosestInteractableObject.name}");
             

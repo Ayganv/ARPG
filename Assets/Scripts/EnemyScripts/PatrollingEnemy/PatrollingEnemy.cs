@@ -23,7 +23,7 @@ public class PatrollingEnemy : MonoBehaviour {
         if(distanceToWaypoint < 1f) {
             IncreaseIndex();
         }
-        if (Vector3.Distance())
+        //if (Vector3.Distance())
         Patrol();
     }
 
