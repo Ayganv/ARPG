@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 6205909219972566897}
   - component: {fileID: 4855165557911981405}
   - component: {fileID: 173305937619492676}
-  - component: {fileID: 1204866061940886029}
   - component: {fileID: -1983640291943621902}
+  - component: {fileID: -248914560217799157}
   m_Layer: 0
   m_Name: MaxPlayerPrefab
   m_TagString: Player
@@ -53,7 +53,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43012ed1cf27cdb478006ae07c59b7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionKey: 101
 --- !u!114 &4304335719610202202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,22 +203,6 @@ MonoBehaviour:
   moveKey: 324
   cam: {fileID: 0}
   agent: {fileID: 4304335719610202205}
---- !u!114 &1204866061940886029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4304335719610202204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ddb809e6afb944a85e11caf335fe14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 0
-  health: 0
-  dead: 0
-  gameover: {fileID: 0}
 --- !u!114 &-1983640291943621902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,3 +216,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentSpawn: {x: 0, y: 0, z: 0}
+--- !u!114 &-248914560217799157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4304335719610202204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d8ebaaa2cf4f543a66e348482f9aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 0
+  dead: 0

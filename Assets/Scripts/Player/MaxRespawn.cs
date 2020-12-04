@@ -10,11 +10,13 @@ public class MaxRespawn : MonoBehaviour
     public Vector3 CurrentSpawn;
 
 
-    private PlayerHealthWithDeath playerHealth;
+    private PlayerHealth playerHealth;
+    private GameOver gameOver;
     private void Start()
     {
         CurrentSpawn = this.transform.position;
-        playerHealth = GetComponent<PlayerHealthWithDeath>();
+        playerHealth = GetComponent<PlayerHealth>();
+        gameOver = FindObjectOfType<GameOver>();
     }
 
     private void Update()
@@ -29,7 +31,7 @@ public class MaxRespawn : MonoBehaviour
         playerHealth.health = playerHealth.maxHealth;
 
         transform.position = CurrentSpawn;
-        playerHealth.gameover.SetActive(false);
+        gameOver.gameoverMenu.SetActive(false);
         GetComponent<NavMeshAgent>().destination = CurrentSpawn;
     }
     
