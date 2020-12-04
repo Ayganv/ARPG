@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,7 +9,7 @@ public class PlayerController : MonoBehaviour {
     
     public Camera cam;
 
-    public NavMeshAgent agent;
+    NavMeshAgent agent => GetComponent<NavMeshAgent>();
 
     void Update() {
         if (Input.GetKeyDown(moveKey)) {
