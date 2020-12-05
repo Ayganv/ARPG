@@ -984,25 +984,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4169108800412525995, guid: fa20238f0de5bb4479ef2c09640869d4, type: 3}
   m_PrefabInstance: {fileID: 2081340335}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1249555327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249555319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c295689c28795d42bcba56c69ba9157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EventPath: event:/SFX/enemyfootstepsEvent
-  m_Wood: 0
-  m_Water: 0
-  m_Dirt: 0
-  m_Sand: 0
-  m_StepDistance: 2
-  m_Debug: 0
 --- !u!4 &1279579379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 525659190827231526, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
