@@ -737,6 +737,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2353690198042599780, guid: 813d1c05866fde347ae7e6cfe19e284c, type: 3}
+      propertyPath: IsRanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353690198042599780, guid: 813d1c05866fde347ae7e6cfe19e284c, type: 3}
+      propertyPath: ViewRadius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2650977397078367717, guid: 813d1c05866fde347ae7e6cfe19e284c, type: 3}
       propertyPath: m_RootOrder
       value: 9

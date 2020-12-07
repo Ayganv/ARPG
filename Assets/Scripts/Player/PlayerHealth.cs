@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Die();
         
+        
         //Temporary commands for testing
         if (Input.GetKeyDown(KeyCode.K)) health = 0;
     }
