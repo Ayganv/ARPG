@@ -112,15 +112,14 @@ public class Enemy : MonoBehaviour
     private void StationaryAttack()
     {
         if (timeSinceLastAttack <= 0)
-            {
-                playerHealth.TakeDamage(Damage);
-                timeSinceLastAttack = TimeBetweenAttack;
-            }
-            else
-            {
-                timeSinceLastAttack -= Time.deltaTime;
-            }
-        
+        {
+            playerHealth.TakeDamage(Damage);
+            timeSinceLastAttack = TimeBetweenAttack;
+        }
+        else
+        {
+            timeSinceLastAttack -= Time.deltaTime;
+        }
     }
 
     private void RangedAttack()

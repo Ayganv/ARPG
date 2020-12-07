@@ -114,8 +114,9 @@ MonoBehaviour:
   MovementSpeed: 0
   StoppingDistance: 0
   RetreatDistance: 0
-  ViewRadius: 0
+  ViewRadius: 2
   IsRanged: 0
   projectile: {fileID: 0}
-  TimeBetweenAttack: 0
-  MeleeDamage: 2
+  TimeBetweenAttack: 1
+  Damage: 2
+  Stationary: 1
