@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerObstacleController : MonoBehaviour{
+public class PlayerController : MonoBehaviour{
     
     private NavMeshAgent agent => GetComponent<NavMeshAgent>();
     

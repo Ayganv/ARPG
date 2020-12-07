@@ -14,7 +14,6 @@ public class Death : MonoBehaviour
     private void Start()
     {
         gameover.SetActive(false);
-        Health = 100;
         Revive = FindObjectOfType<Revive>();
         Player = GameObject.FindWithTag("Player");
     }
@@ -26,24 +25,11 @@ public class Death : MonoBehaviour
             Die(false, Vector3.zero, Vector3.zero, true);
         }
     }
-
-    /*
-    public void Die()
-    {
-        if (Health == 0)
-        {
-            dead = true;
-            GameObject.FindWithTag("Player").GetComponent<playerMovement>().enabled = false;
-            GameObject.FindWithTag("Player").GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GameObject.FindWithTag("Player").GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            gameover.SetActive(true);
-        }
-    }
- */
+    
     public void Die(bool playerMovement, Vector3 velocity, Vector3 angularVelocity, bool gameOver)
     {
         dead = true;
-        Player.GetComponent<playerMovement>().enabled = playerMovement;
+        //Player.GetComponent<playerMovement>().enabled = playerMovement;
         Player.GetComponent<Rigidbody>().velocity = velocity;
         Player.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
         gameover.SetActive(gameOver);
