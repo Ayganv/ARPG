@@ -22,13 +22,14 @@ public class Enemy : MonoBehaviour
     [Space]
     public float TimeBetweenAttack;
 
-    public int MeleeDamage = 2;
+    public int Damage = 2;
 
     private bool playerInRange = false;
     private float timeSinceLastAttack;
 
     private Transform player;
     private PlayerHealth playerHealth;
+    public bool Stationary;
 
     private void Start()
     {
@@ -48,8 +49,16 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-                MeleeUnitMovement();
-                MeleeAttack();
+                if(Stationary)
+                {
+                    StationaryAttack();
+                }
+                else
+                {
+                    MeleeUnitMovement();
+                    MeleeAttack();
+                }
+                
             }
         }
 
@@ -90,7 +99,7 @@ public class Enemy : MonoBehaviour
         {
             if (timeSinceLastAttack <= 0)
             {
-                playerHealth.TakeDamage(MeleeDamage);
+                playerHealth.TakeDamage(Damage);
                 timeSinceLastAttack = TimeBetweenAttack;
             }
             else
@@ -98,6 +107,20 @@ public class Enemy : MonoBehaviour
                 timeSinceLastAttack -= Time.deltaTime;
             }
         }
+    }
+
+    private void StationaryAttack()
+    {
+        if (timeSinceLastAttack <= 0)
+            {
+                playerHealth.TakeDamage(Damage);
+                timeSinceLastAttack = TimeBetweenAttack;
+            }
+            else
+            {
+                timeSinceLastAttack -= Time.deltaTime;
+            }
+        
     }
 
     private void RangedAttack()
