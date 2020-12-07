@@ -30,7 +30,6 @@ public class Enemy : MonoBehaviour
     private Transform player;
     private PlayerHealth playerHealth;
 
-
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -91,8 +90,6 @@ public class Enemy : MonoBehaviour
         {
             if (timeSinceLastAttack <= 0)
             {
-
-                
                 playerHealth.TakeDamage(MeleeDamage);
                 timeSinceLastAttack = TimeBetweenAttack;
             }

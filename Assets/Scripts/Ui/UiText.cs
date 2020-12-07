@@ -12,7 +12,6 @@ public class UiText : MonoBehaviour
     private void Start()
     {
         playerHealth = FindObjectOfType<PlayerHealth>();
-        Debug.Log(playerHealth);
     }
 
     private void Update()
