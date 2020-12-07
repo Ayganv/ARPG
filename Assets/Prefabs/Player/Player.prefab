@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4169108800412525994}
   - component: {fileID: 6086726339168457350}
   - component: {fileID: 4685634276578889898}
+  - component: {fileID: 9175277451812574213}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -201,3 +202,22 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &9175277451812574213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169108800412525995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c295689c28795d42bcba56c69ba9157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/SFX/enemyfootstepsEvent
+  m_Wood: 0
+  m_Water: 0
+  m_Dirt: 0
+  m_Sand: 0
+  m_StepDistance: 2
+  m_Debug: 0
