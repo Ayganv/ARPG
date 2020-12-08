@@ -60,7 +60,7 @@ public class PlayerHealth : MonoBehaviour
         Health -= damageAmount;
         renderer.material.color = Color.red;
         timer = 0;
-        print($"{this} has taken {damageAmount} damage, {PlayerManager.Instance.PlayerHealth} health remain");
+        print($"{this} has taken {damageAmount} damage, {PlayerManager.Instance.PlayerHealth.Health} health remain");
     }
 
     public void ResetColor()
