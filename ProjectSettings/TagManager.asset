@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PatrollingEnemy
   - Wall
+  - RangedEnemy
   layers:
   - Default
   - TransparentFX

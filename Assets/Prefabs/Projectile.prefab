@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2822924714022735873}
   - component: {fileID: 7508552552289342221}
   - component: {fileID: 4351453391568251642}
+  - component: {fileID: -3411995088491314308}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -104,14 +105,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647039571449919212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3507573b97a4bd4196c580bed2e9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
   followingProjectile: 1
-  damageToInflict: 2
 --- !u!54 &4351453391568251642
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,3 +128,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3411995088491314308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647039571449919212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e524e8dc4d3b1a4380b0d6ebdfd0590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  Damage: 2
+  target: {x: 0, y: 0, z: 0}
+  secondsUntilDestroy: 4
+  projectile: 1
