@@ -31,6 +31,8 @@ public class RangedEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _timeSinceLastAttack -= Time.deltaTime;
+        
         if (_playerInRange)
         {
 
@@ -70,10 +72,6 @@ public class RangedEnemy : MonoBehaviour
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
             _timeSinceLastAttack = timeBetweenAttack;
-        }
-        else
-        {
-            _timeSinceLastAttack -= Time.deltaTime;
         }
     }
 
