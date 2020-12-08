@@ -1,26 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AcornSpawner : MonoBehaviour
 {
+    public GameObject acorn;
+
+    [Space]
     public float timeBetweenShots;
+
     private float timer;
 
-    public GameObject acorn;
-    
-    void Update()
+    private void Update()
     {
-        timer += Time.deltaTime;
+        UpdateTime();
+
         Spawn();
     }
 
-    public void Spawn()
+    private void Spawn()
     {
         if (timer >= timeBetweenShots)
         {
             Instantiate(acorn, transform.position, Quaternion.identity);
-            timer = 0;
+            timer -= timeBetweenShots;
         }
+    }
+
+    private void UpdateTime()
+    {
+        timer += Time.deltaTime;
     }
 }

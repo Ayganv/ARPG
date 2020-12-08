@@ -8,9 +8,9 @@ namespace Player
     {
         public static PlayerManager Instance;
 
-        public PlayerHealth playerHealth => GetComponent<PlayerHealth>();
+        public PlayerHealth PlayerHealth => GetComponent<PlayerHealth>();
 
-        public PlayerInteract playerInteract => GetComponent<PlayerInteract>();
+        public PlayerInteract PlayerInteract => GetComponent<PlayerInteract>();
 
         private void Awake()
         {

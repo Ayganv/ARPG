@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Player;
 using UnityEngine;
-using Player;
 
 public class Acorn : MonoBehaviour
 {
-    public float speed;
-    public float damage;
+    public float Speed;
+
+    [Space]
+    public float Damage;
 
     private void Update()
     {
@@ -16,7 +15,7 @@ public class Acorn : MonoBehaviour
 
     public void Move()
     {
-        transform.position += Vector3.forward * speed * Time.deltaTime;
+        transform.position += Vector3.forward * Speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,7 +27,7 @@ public class Acorn : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerManager.Instance.playerHealth.TakeDamage(damage);
+            PlayerManager.Instance.PlayerHealth.TakeDamage(Damage);
             Destroy(this.gameObject);
         }
     }
