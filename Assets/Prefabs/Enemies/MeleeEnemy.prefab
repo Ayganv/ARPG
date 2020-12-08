@@ -50,14 +50,11 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
-  MovementSpeed: 7
-  StoppingDistance: 2
-  RetreatDistance: 0
-  ViewRadius: 5.87
-  IsRanged: 0
-  projectile: {fileID: 0}
-  TimeBetweenAttack: 1
-  MeleeDamage: 10
+  movementSpeed: 7
+  stoppingDistance: 1
+  viewRadius: 0
+  timeBetweenAttack: 1
+  damage: 2
 --- !u!33 &6943197452180703733
 MeshFilter:
   m_ObjectHideFlags: 0
