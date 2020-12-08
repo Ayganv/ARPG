@@ -85,7 +85,7 @@ namespace CameraController
             }
         }
 
-        #endregion
+        #endregion Zoom
 
         #region Follow Player
 
@@ -99,7 +99,7 @@ namespace CameraController
             CameraObject.position = transform.position + PositionOffset;
         }
 
-        #endregion
+        #endregion Follow Player
 
         #region Camera Direction
 
@@ -115,6 +115,6 @@ namespace CameraController
             }
         }
 
-        #endregion
+        #endregion Camera Direction
     }
 }

@@ -2,18 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Player;
 
 public class Acorn : MonoBehaviour
 {
     public float speed;
     public float damage;
-
-    private PlayerHealth playerHealth;
-
-    private void Start()
-    {
-        playerHealth = FindObjectOfType<PlayerHealth>();
-    }
 
     private void Update()
     {
@@ -34,7 +28,7 @@ public class Acorn : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(damage);
+            PlayerManager.Instance.playerHealth.TakeDamage(damage);
             Destroy(this.gameObject);
         }
     }
