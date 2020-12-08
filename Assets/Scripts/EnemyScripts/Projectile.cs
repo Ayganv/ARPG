@@ -12,11 +12,12 @@ public class Projectile : MonoBehaviour
 
     public bool followingProjectile;
 
-    public float damageToInflict;
+    private RangedEnemy _rangedEnemy;
+    private float _damageToInflict;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        
+        _damageToInflict = _rangedEnemy.damage;
         target = new Vector3(player.position.x, player.position.y, player.position.z);
     }
     
@@ -38,7 +39,7 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Wall")) DestroyProjectile();
         if (other.CompareTag("Player"))
         {
-            FindObjectOfType<PlayerHealth>().TakeDamage(damageToInflict);
+            FindObjectOfType<PlayerHealth>().TakeDamage(_damageToInflict);
             DestroyProjectile();
         }
     }

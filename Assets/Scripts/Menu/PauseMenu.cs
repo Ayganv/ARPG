@@ -1,11 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu instance;
+    
+    //used to trigger main music theme and pause music
+    public UnityEvent startPlaying;
+    public UnityEvent pausePlaying;
 
     [Header("Menu Settings")]
     public KeyCode MenuKey;
@@ -27,6 +33,18 @@ public class PauseMenu : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+
+        if (startPlaying == null){
+            startPlaying = new UnityEvent();
+        }
+        
+        if (pausePlaying == null){
+            pausePlaying = new UnityEvent();
+        }
+    }
+
+    private void Start(){
+        startPlaying.Invoke();
     }
 
     private void Update(){
@@ -50,9 +68,11 @@ public class PauseMenu : MonoBehaviour
         if(toggleBool == true){
 
             IsPaused = true;
+            pausePlaying.Invoke();
         }else{
 
             IsPaused = false;
+            startPlaying.Invoke();
         }
 
         MenuObject.SetActive(toggleBool);
