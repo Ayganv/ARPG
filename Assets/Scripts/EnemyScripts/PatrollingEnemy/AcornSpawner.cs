@@ -20,7 +20,7 @@ public class AcornSpawner : MonoBehaviour
     {
         if (timer >= timeBetweenShots)
         {
-            Instantiate(acorn, transform.position, Quaternion.identity);
+            Instantiate(acorn, transform.position, transform.rotation);
             timer -= timeBetweenShots;
         }
     }
