@@ -694,6 +694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -248914560217799157, guid: 44f72f281613af5458a5a8c0c5c16eae, type: 3}
+      propertyPath: redColorDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 173305937619492676, guid: 44f72f281613af5458a5a8c0c5c16eae, type: 3}
       propertyPath: cam
       value: 
