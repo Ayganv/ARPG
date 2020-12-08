@@ -2,15 +2,15 @@
 
 public class RangedEnemy : MonoBehaviour
 {
-    [Header("Movement Behaviour Settings")]
+    
     public LayerMask obstacleMask;
     
     [Space]
-    public float viewRadius;
+    
 
     [Header("Combat Settings")]
     public GameObject projectile;
-
+    public float viewRadius;
     [Space]
     public float timeBetweenAttack;
     public int damage = 2;
@@ -79,6 +79,7 @@ public class RangedEnemy : MonoBehaviour
 
     private void RangedUnitMovement()
     {
+        
        transform.LookAt(_player);
     }
 
