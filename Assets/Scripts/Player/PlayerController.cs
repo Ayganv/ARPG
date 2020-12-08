@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour{
         if (Input.GetMouseButtonDown(0)){
             
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit)){
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
                 agent.SetDestination(hit.point);
             }
         }

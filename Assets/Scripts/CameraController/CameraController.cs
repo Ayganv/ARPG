@@ -7,16 +7,17 @@ namespace CameraController
         [Header("Camera Target Settings")]
         public Transform Target;
 
-        [Space]
-        public bool TargetIsPlayer;
+        [Header("Camera Direction")]
+        public bool LookAtTarget = false;
 
         [Space]
-        public Transform CameraObject;
+        public Vector3 CameraDirection;
 
         [Header("Camera Zoom Settings")]
         public bool CameraCanZoom = true;
 
         [Space]
+        [Range(0, 1)]
         public float ZoomSpeed;
 
         [Space]
@@ -25,38 +26,42 @@ namespace CameraController
         [Header("Camera Offset Settings")]
         public Vector3 PositionOffset;
 
-        [Space]
-        public Quaternion RotationOffset;
-
         [Header("Camera Movement Settings")]
         [Range(0, 1)]
         public float CameraSpeed;
 
+        private Transform CameraObject => transform.GetChild(0);
+
         private void Start()
         {
-            if (Target == null && TargetIsPlayer)
-            {
-                Target = GameObject.FindGameObjectWithTag("Player").transform;
-            }
-            else if (Target == null && !TargetIsPlayer)
-            {
-                Debug.LogError("Camera Has No Target");
-            }
+            UpdateCameraOffset();
+        }
 
-            SetupStartingPosition();
+        private void FixedUpdate()
+        {
+            UpdateCameraPosition();
+
+            UpdateCameraDirection();
         }
 
         private void LateUpdate()
         {
+            if (Target == null)
+            {
+                Debug.LogError("Camera has no target");
+
+                return;
+            }
+
             if (CameraCanZoom)
             {
                 UpdateZoom();
             }
-
-            FollowPlayer();
-
-            UpdateCameraRotation();
         }
+
+        #region Zoom
+
+        //TODO: Clean up method later not priority
 
         private void UpdateZoom()
         {
@@ -75,19 +80,36 @@ namespace CameraController
             CameraObject.position += CameraObject.forward * scrollInput * ZoomSpeed;
         }
 
-        private void FollowPlayer()
+        #endregion
+
+        #region Follow Player
+
+        private void UpdateCameraPosition()
         {
             transform.position = Vector3.Lerp(transform.position, Target.position, CameraSpeed);
         }
 
-        private void SetupStartingPosition()
+        private void UpdateCameraOffset()
         {
-            CameraObject.position = PositionOffset;
+            CameraObject.position = transform.position + PositionOffset;
         }
 
-        private void UpdateCameraRotation()
+        #endregion
+
+        #region Camera Direction
+
+        private void UpdateCameraDirection()
         {
-            transform.rotation = RotationOffset;
+            if (LookAtTarget)
+            {
+                CameraObject.LookAt(Target);
+            }
+            else
+            {
+                CameraObject.rotation = Quaternion.Euler(CameraDirection.x, CameraDirection.y, CameraDirection.z);
+            }
         }
+
+        #endregion
     }
 }
