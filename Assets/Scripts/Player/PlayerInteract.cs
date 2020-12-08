@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using Interaction;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Interaction
+namespace Player
 {
     public class PlayerInteract : MonoBehaviour
     {
