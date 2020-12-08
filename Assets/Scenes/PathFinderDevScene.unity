@@ -984,6 +984,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4169108800412525995, guid: fa20238f0de5bb4479ef2c09640869d4, type: 3}
   m_PrefabInstance: {fileID: 2081340335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1249555321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4685634276578889898, guid: fa20238f0de5bb4479ef2c09640869d4, type: 3}
+  m_PrefabInstance: {fileID: 2081340335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249555319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1279579379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 525659190827231526, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
@@ -1032,16 +1043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc2365526c190a43b23833ce27cd560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - soundName: level1Theme
-    clip: {fileID: 8300000, guid: 4651a60d6a717ed44a9716465401028b, type: 3}
-    volume: 0.3
-    pitch: 1
-    loop: 1
-    spatialBlend: 0
-    minDistance: 10
-    maxDistance: 500
-    audioSource: {fileID: 0}
 --- !u!1001 &1429759933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1336,6 +1337,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 8323861282500975809, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: pausePlaying.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1249555321}
+    - target: {fileID: 8323861282500975809, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
+      propertyPath: startPlaying.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1249555321}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
 --- !u!1001 &2081340335
@@ -1391,6 +1400,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4169108800412525998, guid: fa20238f0de5bb4479ef2c09640869d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685634276578889898, guid: fa20238f0de5bb4479ef2c09640869d4, type: 3}
+      propertyPath: PlayEvent
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685634276578889898, guid: fa20238f0de5bb4479ef2c09640869d4, type: 3}
