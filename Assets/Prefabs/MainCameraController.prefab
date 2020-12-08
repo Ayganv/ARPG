@@ -45,13 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  TargetIsPlayer: 1
-  CameraObject: {fileID: 3773049742335120708}
+  LookAtTarget: 0
+  CameraDirection: {x: 0, y: 0, z: 0}
   CameraCanZoom: 1
   ZoomSpeed: 5
   ZoomDistanceMinMax: {x: 5, y: 30}
   PositionOffset: {x: 0, y: 0, z: -15}
-  RotationOffset: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
   CameraSpeed: 0.33
 --- !u!1 &7962483701626591761
 GameObject:

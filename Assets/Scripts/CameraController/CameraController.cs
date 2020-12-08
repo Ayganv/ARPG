@@ -31,17 +31,11 @@ namespace CameraController
         public float CameraSpeed;
 
         private Transform CameraObject => transform.GetChild(0);
+        private Camera MainCamera => CameraObject.GetComponent<Camera>();
 
         private void Start()
         {
             UpdateCameraOffset();
-        }
-
-        private void FixedUpdate()
-        {
-            UpdateCameraPosition();
-
-            UpdateCameraDirection();
         }
 
         private void LateUpdate()
@@ -57,6 +51,10 @@ namespace CameraController
             {
                 UpdateZoom();
             }
+
+            UpdateCameraPosition();
+
+            UpdateCameraDirection();
         }
 
         #region Zoom
@@ -68,16 +66,23 @@ namespace CameraController
             float scrollInput = Input.GetAxis("Mouse ScrollWheel");
             float distance = Vector3.Distance(Target.position, CameraObject.position);
 
-            if (distance <= ZoomDistanceMinMax.x && scrollInput > 0)
+            if (distance <= ZoomDistanceMinMax.x && scrollInput > 0 || MainCamera.orthographicSize <= ZoomDistanceMinMax.x && scrollInput > 0)
             {
                 return;
             }
-            else if (distance >= ZoomDistanceMinMax.y && scrollInput < 0)
+            else if (distance >= ZoomDistanceMinMax.y && scrollInput < 0 || MainCamera.orthographicSize >= ZoomDistanceMinMax.y && scrollInput < 0)
             {
                 return;
             }
 
-            CameraObject.position += CameraObject.forward * scrollInput * ZoomSpeed;
+            if (MainCamera.orthographic)
+            {
+                MainCamera.orthographicSize -= scrollInput * ZoomSpeed;
+            }
+            else
+            {
+                CameraObject.position += CameraObject.forward * scrollInput * ZoomSpeed;
+            }
         }
 
         #endregion

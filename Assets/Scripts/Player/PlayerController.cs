@@ -2,7 +2,7 @@
 using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour{
-    
+
     private NavMeshAgent agent => GetComponent<NavMeshAgent>();
     
     public void Update(){
