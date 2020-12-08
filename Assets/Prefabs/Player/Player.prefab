@@ -66,12 +66,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d8ebaaa2cf4f543a66e348482f9aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dead: 0
   MaxHealth: 100
   Health: 0
+  Dead: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  redColorDuration: 0.4
 --- !u!114 &4169108800412525997
 MonoBehaviour:
   m_ObjectHideFlags: 0

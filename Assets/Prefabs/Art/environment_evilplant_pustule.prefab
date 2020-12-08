@@ -111,8 +111,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.7937722
-  m_Center: {x: 0, y: -0.09116173, z: -0.033941746}
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3917559848817199658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   movementSpeed: 0
-  stoppingDistance: 2
-  viewRadius: 3
+  stoppingDistance: 4
+  viewRadius: 4
   timeBetweenAttack: 1
   damage: 2
