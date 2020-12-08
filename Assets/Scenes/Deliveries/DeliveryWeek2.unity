@@ -725,6 +725,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
+--- !u!4 &1256065972 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4169108800412525998, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+  m_PrefabInstance: {fileID: 207154797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1338295176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 525659190827231526, guid: 9bbfcb3c652c74f46ac4a169fe776504, type: 3}
@@ -989,6 +994,22 @@ PrefabInstance:
     - target: {fileID: 1383176580430160205, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
       propertyPath: m_Name
       value: MainCameraController
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 1256065972}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: PositionOffset.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: PositionOffset.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: CameraDirection.x
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}

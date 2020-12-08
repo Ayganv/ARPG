@@ -37,13 +37,6 @@ namespace CameraController
             UpdateCameraOffset();
         }
 
-        private void FixedUpdate()
-        {
-            UpdateCameraPosition();
-
-            UpdateCameraDirection();
-        }
-
         private void LateUpdate()
         {
             if (Target == null)
@@ -57,6 +50,10 @@ namespace CameraController
             {
                 UpdateZoom();
             }
+
+            UpdateCameraPosition();
+
+            UpdateCameraDirection();
         }
 
         #region Zoom
