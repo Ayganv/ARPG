@@ -44,14 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c218956b9b777a4f9fcc0732f0be83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
-  LookAtTarget: 0
-  CameraDirection: {x: 0, y: 0, z: 0}
   CameraCanZoom: 1
-  ZoomSpeed: 5
-  ZoomDistanceMinMax: {x: 5, y: 30}
-  PositionOffset: {x: 0, y: 0, z: -15}
+  CameraDirection: {x: 45, y: 0, z: 0}
   CameraSpeed: 0.33
+  LookAtTarget: 0
+  PositionOffset: {x: 0, y: 15, z: -15}
+  Target: {fileID: 0}
+  ZoomDistanceMinMax: {x: 5, y: 30}
+  ZoomSpeed: 5
 --- !u!1 &7962483701626591761
 GameObject:
   m_ObjectHideFlags: 0
