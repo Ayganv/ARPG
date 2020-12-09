@@ -23,7 +23,7 @@ public class Death : MonoBehaviour
     {
         if (Health.Health == 0)
         {
-            var vectorzero = new Vector3(0,0,0);
+            var vectorzero = new Vector3(0, 0, 0);
             Die(true, false, vectorzero, vectorzero, true);
             Time.timeScale = 0;
         }
