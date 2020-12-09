@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    public bool dead = false;
+    public bool dead1 = false;
     public GameObject gameover;
     public int Health = 100;
     private Revive Revive;
@@ -22,14 +22,15 @@ public class Death : MonoBehaviour
     {
         if (Health == 0)
         {
-            Die(true, false, Vector3.zero, Vector3.zero, true);
+            var vectorzero = new Vector3(0,0,0);
+            Die(true, false, vectorzero, vectorzero, true);
         }
     }
 
-    public void Die(bool dead, bool playerMovement, Vector3 velocity, Vector3 angularVelocity, bool gameOver)
+    public void Die(bool deadbool, bool playerMovement, Vector3 velocity, Vector3 angularVelocity, bool gameOver)
     {
-        dead = dead;
-        // Player.GetComponent<playerMovement>().enabled = playerMovement;
+        dead1 = deadbool;
+        Player.GetComponent<PlayerController>().enabled = playerMovement;
         Player.GetComponent<Rigidbody>().velocity = velocity;
         Player.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
         gameover.SetActive(gameOver);
