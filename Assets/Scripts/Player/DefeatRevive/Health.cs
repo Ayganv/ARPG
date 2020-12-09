@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        this.healthTxt.text = $@"Health: {(Death.Health)}";
+        this.healthTxt.text = $@"Health: {(GetComponent<PlayerHealth>().Health)}";
         this.healthTxt.color = Color.red;
     }
 }

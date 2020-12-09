@@ -7,7 +7,7 @@ public class Death : MonoBehaviour
 {
     public bool dead1 = false;
     public GameObject gameover;
-    public int Health = 100;
+    private PlayerHealth Health;
     private Revive Revive;
     private GameObject Player;
 
@@ -16,11 +16,12 @@ public class Death : MonoBehaviour
         gameover.SetActive(false);
         Revive = FindObjectOfType<Revive>();
         Player = GameObject.FindWithTag("Player");
+        Health = FindObjectOfType<PlayerHealth>();
     }
 
     private void Update()
     {
-        if (Health == 0)
+        if (Health.Health == 0)
         {
             var vectorzero = new Vector3(0,0,0);
             Die(true, false, vectorzero, vectorzero, true);
@@ -39,9 +40,9 @@ public class Death : MonoBehaviour
 
     public void KillButtom()
     {
-        if (Health > 0)
+        if (Health.Health > 0)
         {
-            Health -= 50;
+            Health.Health -= 50;
         }
     }
 }

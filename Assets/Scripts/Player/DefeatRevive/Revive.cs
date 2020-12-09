@@ -8,6 +8,6 @@ public class Revive : MonoBehaviour
     {
         FindObjectOfType<Death>().Die(deadbool: false, playerMovement: true, velocity: Vector3.zero, angularVelocity: Vector3.zero,
             gameOver: false);
-        GameObject.FindWithTag("Player").GetComponent<Death>().Health = 100;
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Health = 100;
     }
 }
