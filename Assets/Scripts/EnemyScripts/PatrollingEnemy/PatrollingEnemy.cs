@@ -5,6 +5,7 @@ public class PatrollingEnemy : MonoBehaviour
     public Transform[] waypoints;
     public int Speed;
     public float AttackDamage = 1;
+
     private int waypointIndex;
     private float distanceToWaypoint;
     private PlayerHealth playerHealth;

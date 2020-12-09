@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UiText : MonoBehaviour
 {
-    public Text healthText;
-    private PlayerHealth playerHealth;
+    public Text HealthText;
 
-    private void Start()
+    private PlayerHealth PlayerHealth;
+
+    private void Awake()
     {
-        playerHealth = FindObjectOfType<PlayerHealth>();
+        PlayerHealth = FindObjectOfType<PlayerHealth>();
     }
 
     private void Update()
     {
-        healthText.text = "Health: " + playerHealth.Health;
+        HealthText.text = $"Health: {PlayerHealth.Health}";
     }
 }

@@ -30,6 +30,8 @@ namespace CameraController
         [Range(0, 1)]
         public float ZoomSpeed;
 
+        private bool ZoomIsClamped;
+
         private Transform CameraObject => transform.GetChild(0);
         private Camera MainCamera => CameraObject.GetComponent<Camera>();
 
@@ -66,39 +68,42 @@ namespace CameraController
 
         #region Zoom
 
-        //TODO: Fix duplication and refactor methods
-
         private void UpdatePerspectiveZoom()
         {
-            float scrollInput = Input.GetAxis("Mouse ScrollWheel");
             float distance = Vector3.Distance(Target.position, CameraObject.position);
 
-            if (distance <= ZoomDistanceMinMax.x && scrollInput > 0)
-            {
-                return;
-            }
-            else if (distance >= ZoomDistanceMinMax.y && scrollInput < 0)
-            {
-                return;
-            }
+            ClampZoom(distance, Input.GetAxis("Mouse ScrollWheel"));
 
-            CameraObject.position += CameraObject.forward * scrollInput * ZoomSpeed;
+            if (!ZoomIsClamped)
+            {
+                CameraObject.position += CameraObject.forward * Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed;
+            }
         }
 
         private void UpdateOrthographicZoom()
         {
-            float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+            ClampZoom(MainCamera.orthographicSize, Input.GetAxis("Mouse ScrollWheel"));
 
-            if (MainCamera.orthographicSize <= ZoomDistanceMinMax.x && scrollInput > 0)
+            if (!ZoomIsClamped)
             {
-                return;
+                MainCamera.orthographicSize += Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed;
             }
-            else if (MainCamera.orthographicSize >= ZoomDistanceMinMax.y && scrollInput < 0)
-            {
-                return;
-            }
+        }
 
-            MainCamera.orthographicSize += scrollInput * ZoomSpeed;
+        private void ClampZoom(float ZoomAmount, float scrollAmount)
+        {
+            if (ZoomAmount <= ZoomDistanceMinMax.x && scrollAmount > 0)
+            {
+                ZoomIsClamped = true;
+            }
+            else if (ZoomAmount >= ZoomDistanceMinMax.y && scrollAmount < 0)
+            {
+                ZoomIsClamped = true;
+            }
+            else
+            {
+                ZoomIsClamped = false;
+            }
         }
 
         #endregion Zoom
