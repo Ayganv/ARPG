@@ -10,28 +10,20 @@ public class PlayerHealth : MonoBehaviour
     [Space]
     public bool Dead;
 
+    [Header("Unity Events")]
     public UnityEvent OnDeath;
-    public UnityEvent OnTakingDamage;
-    
-    public float redColorDuration;
 
-    private Color regularColor;
-    private Renderer Renderer => GetComponent<Renderer>();
-    private float timer;
+    public UnityEvent OnTakingDamage;
+
+    public DamageIndicator DamageIndicator => GetComponent<DamageIndicator>();
 
     private void Start()
     {
         Health = MaxHealth;
-
-        regularColor = Renderer.material.color;
     }
 
     private void Update()
     {
-        UpdateTimer();
-
-        ResetColor();
-
         //Temporary commands for testing
         if (Input.GetKeyDown(KeyCode.K)) Health = 0;
 
@@ -41,35 +33,17 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void UpdateTimer()
-    {
-        timer += Time.deltaTime;
-    }
-
     public void Die()
     {
         Dead = true;
         OnDeath.Invoke();
-
-        ResetColor();
-
         Debug.Log($"{this} has died");
     }
 
     public void TakeDamage(float damageAmount)
     {
         Health -= damageAmount;
-        Renderer.material.color = Color.red;
-        timer = 0;
         print($"{this} has taken {damageAmount} damage, {PlayerManager.Instance.PlayerHealth.Health} health remain");
         OnTakingDamage.Invoke();
-    }
-
-    public void ResetColor()
-    {
-        if (timer >= redColorDuration)
-        {
-            Renderer.material.color = regularColor;
-        }
     }
 }
