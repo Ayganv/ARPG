@@ -1048,6 +1048,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2771188694936287357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: OnTakingDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771188694936287357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: OnTakingDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771188694936287357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: OnTakingDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1417201029}
+    - target: {fileID: 2771188694936287357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: OnTakingDamage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771188694936287357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: OnTakingDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771188694936287357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: OnTakingDamage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FMODUnity.StudioEventEmitter, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771188694936287357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: OnTakingDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4169108800412525995, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1100,9 +1128,24 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8417212465476613415, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4685634276578889898, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+--- !u!114 &1417201029 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3038153572964613414, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+  m_PrefabInstance: {fileID: 1417201028}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1429759933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1526,6 +1569,10 @@ PrefabInstance:
     - target: {fileID: 7188488911484367256, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
       propertyPath: m_Name
       value: PatrollingAcorn
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821063121494966378, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9184055975836124056, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
       propertyPath: m_RootOrder

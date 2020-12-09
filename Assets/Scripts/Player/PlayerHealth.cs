@@ -11,7 +11,8 @@ public class PlayerHealth : MonoBehaviour
     public bool Dead;
 
     public UnityEvent OnDeath;
-
+    public UnityEvent OnTakingDamage;
+    
     public float redColorDuration;
 
     private Color regularColor;
@@ -61,6 +62,7 @@ public class PlayerHealth : MonoBehaviour
         renderer.material.color = Color.red;
         timer = 0;
         print($"{this} has taken {damageAmount} damage, {PlayerManager.Instance.PlayerHealth.Health} health remain");
+        OnTakingDamage.Invoke();
     }
 
     public void ResetColor()
