@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5497684250067755104}
-  - component: {fileID: 5497684250067755111}
   - component: {fileID: 5497684250067755107}
+  - component: {fileID: 5571525988426666404}
   - component: {fileID: 5497684250067755106}
   - component: {fileID: 5497684250067755109}
   - component: {fileID: 5497684250067755108}
@@ -35,29 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5497684250067755111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5497684250067755110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a014dc25c4f0394f92271bb878dc934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 512
-  MovementSpeed: 5
-  StoppingDistance: 5
-  RetreatDistance: 4
-  ViewRadius: 10
-  IsRanged: 1
-  projectile: {fileID: 647039571449919212, guid: be275b4c90c817941b1e63bd23f9ed33, type: 3}
-  TimeBetweenAttack: 1
-  MeleeDamage: 2
 --- !u!33 &5497684250067755107
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -66,6 +43,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5497684250067755110}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5571525988426666404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497684250067755110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673083b80b9155e45956546c7f5ebc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  projectile: {fileID: 647039571449919212, guid: be275b4c90c817941b1e63bd23f9ed33, type: 3}
+  viewRadius: 0
+  timeBetweenAttack: 1
+  damage: 2
 --- !u!23 &5497684250067755106
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -134,5 +130,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0

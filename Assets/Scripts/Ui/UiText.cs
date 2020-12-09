@@ -16,6 +16,6 @@ public class UiText : MonoBehaviour
 
     private void Update()
     {
-        healthText.text = "Health: " + playerHealth.health;
+        healthText.text = "Health: " + playerHealth.Health;
     }
 }

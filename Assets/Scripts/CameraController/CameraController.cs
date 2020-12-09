@@ -4,39 +4,34 @@ namespace CameraController
 {
     public class CameraController : MonoBehaviour
     {
-        [Header("Camera Target Settings")]
-        public Transform Target;
-
-        [Header("Camera Direction")]
-        public bool LookAtTarget = false;
-
-        [Space]
-        public Vector3 CameraDirection;
-
         [Header("Camera Zoom Settings")]
         public bool CameraCanZoom = true;
 
         [Space]
-        [Range(0, 1)]
-        public float ZoomSpeed;
-
-        [Space]
-        public Vector2 ZoomDistanceMinMax = new Vector2(5, 30);
-
-        [Header("Camera Offset Settings")]
-        public Vector3 PositionOffset;
+        public Vector3 CameraDirection;
 
         [Header("Camera Movement Settings")]
         [Range(0, 1)]
         public float CameraSpeed;
 
+        [Header("Camera Direction")]
+        public bool LookAtTarget = false;
+
+        [Header("Camera Offset Settings")]
+        public Vector3 PositionOffset;
+
+        [Header("Camera Target Settings")]
+        public Transform Target;
+
+        [Space]
+        public Vector2 ZoomDistanceMinMax = new Vector2(5, 30);
+
+        [Space]
+        [Range(0, 1)]
+        public float ZoomSpeed;
+
         private Transform CameraObject => transform.GetChild(0);
         private Camera MainCamera => CameraObject.GetComponent<Camera>();
-
-        private void Start()
-        {
-            UpdateCameraOffset();
-        }
 
         private void LateUpdate()
         {
@@ -49,7 +44,14 @@ namespace CameraController
 
             if (CameraCanZoom)
             {
-                UpdateZoom();
+                if (MainCamera.orthographic)
+                {
+                    UpdateOrthographicZoom();
+                }
+                else
+                {
+                    UpdatePerspectiveZoom();
+                }
             }
 
             UpdateCameraPosition();
@@ -57,49 +59,63 @@ namespace CameraController
             UpdateCameraDirection();
         }
 
+        private void Start()
+        {
+            UpdateCameraOffset();
+        }
+
         #region Zoom
 
-        //TODO: Clean up method later not priority
+        //TODO: Fix duplication and refactor methods
 
-        private void UpdateZoom()
+        private void UpdatePerspectiveZoom()
         {
             float scrollInput = Input.GetAxis("Mouse ScrollWheel");
             float distance = Vector3.Distance(Target.position, CameraObject.position);
 
-            if (distance <= ZoomDistanceMinMax.x && scrollInput > 0 || MainCamera.orthographicSize <= ZoomDistanceMinMax.x && scrollInput > 0)
+            if (distance <= ZoomDistanceMinMax.x && scrollInput > 0)
             {
                 return;
             }
-            else if (distance >= ZoomDistanceMinMax.y && scrollInput < 0 || MainCamera.orthographicSize >= ZoomDistanceMinMax.y && scrollInput < 0)
+            else if (distance >= ZoomDistanceMinMax.y && scrollInput < 0)
             {
                 return;
             }
 
-            if (MainCamera.orthographic)
-            {
-                MainCamera.orthographicSize -= scrollInput * ZoomSpeed;
-            }
-            else
-            {
-                CameraObject.position += CameraObject.forward * scrollInput * ZoomSpeed;
-            }
+            CameraObject.position += CameraObject.forward * scrollInput * ZoomSpeed;
         }
 
-        #endregion
+        private void UpdateOrthographicZoom()
+        {
+            float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+
+            if (MainCamera.orthographicSize <= ZoomDistanceMinMax.x && scrollInput > 0)
+            {
+                return;
+            }
+            else if (MainCamera.orthographicSize >= ZoomDistanceMinMax.y && scrollInput < 0)
+            {
+                return;
+            }
+
+            MainCamera.orthographicSize += scrollInput * ZoomSpeed;
+        }
+
+        #endregion Zoom
 
         #region Follow Player
-
-        private void UpdateCameraPosition()
-        {
-            transform.position = Vector3.Lerp(transform.position, Target.position, CameraSpeed);
-        }
 
         private void UpdateCameraOffset()
         {
             CameraObject.position = transform.position + PositionOffset;
         }
 
-        #endregion
+        private void UpdateCameraPosition()
+        {
+            transform.position = Vector3.Lerp(transform.position, Target.position, CameraSpeed);
+        }
+
+        #endregion Follow Player
 
         #region Camera Direction
 
@@ -115,6 +131,6 @@ namespace CameraController
             }
         }
 
-        #endregion
+        #endregion Camera Direction
     }
 }

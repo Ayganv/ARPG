@@ -27,8 +27,8 @@ public class MaxRespawn : MonoBehaviour
     
     public void ReviveButton()
     {
-        playerHealth.dead = false;
-        playerHealth.health = playerHealth.maxHealth;
+        playerHealth.Dead = false;
+        playerHealth.Health = playerHealth.MaxHealth;
 
         transform.position = CurrentSpawn;
         gameOver.gameoverMenu.SetActive(false);

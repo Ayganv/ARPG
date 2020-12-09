@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725081500937255546}
   - component: {fileID: 8323861282500975809}
+  - component: {fileID: 7310950078016986830}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -120,9 +121,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ebf726a4203eb4586fd10a46b756a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPlaying:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3500524035762385587, guid: b6c12bd1e75ff0742aa32e5024fa3ca3, type: 3}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7310950078016986830}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pausePlaying:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3500524035762385587, guid: b6c12bd1e75ff0742aa32e5024fa3ca3, type: 3}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7310950078016986830}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   MenuKey: 27
   MenuObject: {fileID: 1725081501777464046}
   IsPaused: 0
+--- !u!114 &7310950078016986830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725081500937255547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/BGM/menuMusicEvent
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1725081501777464046
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/UI/uiTransitionEvent
+  Event: event:/UI/uiButtonEvent
   PlayEvent: 13
   StopEvent: 0
   AllowFadeout: 1

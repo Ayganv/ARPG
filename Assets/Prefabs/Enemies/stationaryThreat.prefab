@@ -111,12 +111,8 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
-  MovementSpeed: 0
-  StoppingDistance: 0
-  RetreatDistance: 0
-  ViewRadius: 2
-  IsRanged: 0
-  projectile: {fileID: 0}
-  TimeBetweenAttack: 1
-  Damage: 2
-  Stationary: 1
+  movementSpeed: 0
+  stoppingDistance: 0
+  viewRadius: 2
+  timeBetweenAttack: 1
+  damage: 2

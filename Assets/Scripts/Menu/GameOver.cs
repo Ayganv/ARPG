@@ -17,7 +17,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHealth.dead)
+        if (playerHealth.Dead)
         {
             gameoverMenu.SetActive(true);
             Time.timeScale = 0;
