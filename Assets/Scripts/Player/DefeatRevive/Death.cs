@@ -22,14 +22,14 @@ public class Death : MonoBehaviour
     {
         if (Health == 0)
         {
-            Die(false, Vector3.zero, Vector3.zero, true);
+            Die(true, false, Vector3.zero, Vector3.zero, true);
         }
     }
-    
-    public void Die(bool playerMovement, Vector3 velocity, Vector3 angularVelocity, bool gameOver)
+
+    public void Die(bool dead, bool playerMovement, Vector3 velocity, Vector3 angularVelocity, bool gameOver)
     {
-        dead = true;
-        //Player.GetComponent<playerMovement>().enabled = playerMovement;
+        dead = dead;
+        // Player.GetComponent<playerMovement>().enabled = playerMovement;
         Player.GetComponent<Rigidbody>().velocity = velocity;
         Player.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
         gameover.SetActive(gameOver);
