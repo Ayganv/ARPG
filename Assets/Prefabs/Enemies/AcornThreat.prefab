@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6331918968722855304
 Transform:
@@ -200,17 +200,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: AcornSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 7287936884342714303, guid: 71538e7d00eeaab49a91406cab5922c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7287936885239419465, guid: 71538e7d00eeaab49a91406cab5922c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7287936885239419465, guid: 71538e7d00eeaab49a91406cab5922c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7287936885239419467, guid: 71538e7d00eeaab49a91406cab5922c7, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287936885239419470, guid: 71538e7d00eeaab49a91406cab5922c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71538e7d00eeaab49a91406cab5922c7, type: 3}
