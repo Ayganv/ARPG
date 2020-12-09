@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class MeleeEnemy : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class MeleeEnemy : MonoBehaviour
 
     private Transform _player;
     private PlayerHealth _playerHealth;
+    
+    public UnityEvent OnAttacking;
 
     private void Start()
     {
@@ -77,6 +80,7 @@ public class MeleeEnemy : MonoBehaviour
             if (_timeSinceLastAttack <= 0)
             {
                 _playerHealth.TakeDamage(damage);
+                OnAttacking.Invoke();
                 _timeSinceLastAttack = timeBetweenAttack;
             }
             else
