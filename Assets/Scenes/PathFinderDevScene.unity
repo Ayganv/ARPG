@@ -1596,10 +1596,6 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4597765118569528442, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
-      propertyPath: AttackDamage
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 4597765118569528446, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
       propertyPath: m_Enabled
       value: 1

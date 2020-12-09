@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class PatrollingEnemy : MonoBehaviour
 {
@@ -9,7 +10,17 @@ public class PatrollingEnemy : MonoBehaviour
     private int waypointIndex;
     private float distanceToWaypoint;
     private PlayerHealth playerHealth;
+    [Space]
+    public float absorbDistance = 2f;
+    public float shootDistance = 1;
+    [Space]
+    public UnityEvent OnShooting;
+    public UnityEvent OnAbsorbing;
 
+   
+    
+    private bool hasAbsorbed = false;
+    
     private void Start()
     {
         waypointIndex = 0;
@@ -21,9 +32,16 @@ public class PatrollingEnemy : MonoBehaviour
     {
         distanceToWaypoint = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
 
-        if (distanceToWaypoint < 1f)
+        if (distanceToWaypoint < absorbDistance && !hasAbsorbed){
+            OnAbsorbing.Invoke();
+            hasAbsorbed = true;
+        }
+        
+        if (distanceToWaypoint < shootDistance)
         {
+            OnShooting.Invoke();
             IncreaseIndex();
+            hasAbsorbed = false;
         }
 
         Patrol();
