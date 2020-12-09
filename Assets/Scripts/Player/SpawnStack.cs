@@ -15,7 +15,7 @@ public class CheckPoint
     //public static delegate bool successCheck();
     public bool successCheck(Vector3 Currentposition)
     {
-        Debug.Log(Vector3.Distance(Currentposition, GoalPosition));
+        //Debug.Log(Vector3.Distance(Currentposition, GoalPosition));
         return Vector3.Distance(Currentposition, GoalPosition) < CheckPoint.successRadius;
     }
     public CheckPoint(Vector3 SpawnPosition, Vector3 GoalPosition, string Message, int Number)
@@ -43,14 +43,20 @@ public class SpawnStack : MonoBehaviour
     private void Update()
     {
         this.UpdateCheckPoint();
-        if(Input.GetKeyDown("a"))
+
+        //just for testing 
+       /* if(Input.GetKeyDown("a"))
             gameObject.GetComponent<Rigidbody>().velocity = new Vector3(-15,0,0);
         if(Input.GetKeyDown("s"))  
             gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0,0,-15);  
         if(Input.GetKeyDown("w"))  
             gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0,0,15); 
         if(Input.GetKeyDown("d"))  
-            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(15,0,0);     
+            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(15,0,0); 
+         */
+        //just for testing
+
+
     }
     //add SO
     public void AddCheckPoint(CheckPointSO checkpoint)
@@ -60,14 +66,29 @@ public class SpawnStack : MonoBehaviour
     }
     public void UpdateCheckPoint()
     {
+        //if the spawn stack is empty, add the first checkpoint
         if(this.Stack.Count == 0)
         {
             this.AddCheckPoint(this.CheckPoints[0]);
         }
         if(this.getLatestSpawnData().successCheck(gameObject.transform.position))
         {
-            Debug.Log(this.getLatestSpawnData().Number);
-            this.AddCheckPoint(CheckPoints[this.getLatestSpawnData().Number + 1]);
+            //Debug.Log(this.getLatestSpawnData().Number);
+            
+            if(this.getLatestSpawnData().Number + 1 < this.CheckPoints.Count)
+            {
+                //Debug.Log(" current checkpoint");
+                //Debug.Log(this.getLatestSpawnData().Number);
+                this.AddCheckPoint(CheckPoints[this.getLatestSpawnData().Number + 1]);
+                Debug.Log("Checkpoints count " +CheckPoints.Count);
+                Debug.Log("Current checkpoint " +this.getLatestSpawnData().Number);
+                
+            }
+            else
+            {
+               SpawnTask.GetComponent<Text>().text = "Congratulations, you have completed all tasks"; 
+            }
+     
         }
 
     }
@@ -77,6 +98,10 @@ public class SpawnStack : MonoBehaviour
 
     }
     
+    public void ReSpawn()
+    {
+        gameObject.transform.position = getLatestSpawnData().GetSpawnPosition();
+    }
     public CheckPoint getLatestSpawnData(){
         return this.Stack.Peek();
     }
