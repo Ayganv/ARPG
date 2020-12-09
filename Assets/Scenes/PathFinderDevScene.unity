@@ -1506,10 +1506,6 @@ PrefabInstance:
       propertyPath: startPlaying.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1862892953}
-    - target: {fileID: 8323861282500975809, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
-      propertyPath: pausePlaying.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Stop
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e6e3a41621c6d4d8cf065937aa43a7, type: 3}
 --- !u!1001 &525659191703633365
