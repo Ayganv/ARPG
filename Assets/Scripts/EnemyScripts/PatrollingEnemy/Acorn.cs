@@ -14,10 +14,13 @@ public class Acorn : MonoBehaviour
     public float secondsUntilDestroy = 8;
     public bool projectile;
 
-    private void Awake()
-    {
-        target = FindObjectOfType<PlayerHealth>().transform.position;
-        if (projectile)
+    private void Awake(){
+        var playerHealth = FindObjectOfType<PlayerHealth>();
+        
+        if(playerHealth!=null)
+            target = playerHealth.transform.position;
+        
+        if (projectile && target != null)
         {
             transform.LookAt(target);
         }
