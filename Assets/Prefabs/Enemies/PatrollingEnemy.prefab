@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e54205e74894e354f951afaf8dc83cc1, type: 2}
+  - {fileID: 2100000, guid: 205f030620a56d746b34a14b253058e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,9 +112,9 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 5
+  Speed: 2
+  AttackDamage: 50
+  timeToWait: 5
 --- !u!54 &8128168266024401518
 Rigidbody:
   m_ObjectHideFlags: 0
