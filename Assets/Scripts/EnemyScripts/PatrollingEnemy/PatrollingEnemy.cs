@@ -7,7 +7,9 @@ public class PatrollingEnemy : MonoBehaviour {
     private int waypointIndex;
     private float distanceToWaypoint;
     private PlayerHealth playerHealth;
-    
+
+    private float timer;
+    public float timeToWait = 5;
 
     void Start() {
         waypointIndex = 0;
@@ -15,14 +17,24 @@ public class PatrollingEnemy : MonoBehaviour {
         playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
+        timer += Time.deltaTime;
         distanceToWaypoint = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
         
-        if(distanceToWaypoint < 1f) {
-            IncreaseIndex();
+        if(distanceToWaypoint < 1f)
+        {
+            
+            if (timer >= timeToWait)
+            {
+                IncreaseIndex();
+                timer -= timeToWait;
+            }
         }
-        
-        Patrol();
+        else
+        {
+            Patrol();
+        }
     }
 
     void Patrol() 
