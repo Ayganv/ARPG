@@ -1495,9 +1495,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4597765118569528441, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597765118569528441, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4597765118569528442, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
       propertyPath: AttackDamage
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597765118569528446, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597765118569528446, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7188488911484367256, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
       propertyPath: m_Name
