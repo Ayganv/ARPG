@@ -1354,6 +1354,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2017064801147135097, guid: fa20238f0de5bb4479ef2c09640869d4, type: 3}
+      propertyPath: m_EventPath
+      value: event:/Player/playerFootstepsEvent
+      objectReference: {fileID: 0}
     - target: {fileID: 4169108800412525995, guid: fa20238f0de5bb4479ef2c09640869d4, type: 3}
       propertyPath: m_Name
       value: JoelTestPlayer

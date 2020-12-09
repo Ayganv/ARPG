@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c295689c28795d42bcba56c69ba9157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EventPath: event:/SFX/enemyfootstepsEvent
+  m_EventPath: event:/Player/playerFootstepsEvent
   m_Wood: 0
   m_Water: 0
   m_Dirt: 0
