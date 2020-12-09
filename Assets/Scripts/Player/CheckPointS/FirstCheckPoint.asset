@@ -15,4 +15,4 @@ MonoBehaviour:
   Message: Go to the first box
   Number: 0
   SpawnPosition: {x: 0, y: 0, z: 0}
-  GoalPosition: {x: -11, y: 0, z: 9}
+  GoalPosition: {x: -35, y: 0, z: 4}
