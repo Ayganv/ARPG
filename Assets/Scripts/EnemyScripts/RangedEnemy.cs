@@ -2,17 +2,16 @@
 
 public class RangedEnemy : MonoBehaviour
 {
-    
     public LayerMask obstacleMask;
-    
-    [Space]
-    
 
     [Header("Combat Settings")]
     public GameObject projectile;
+
     public float viewRadius;
+
     [Space]
     public float timeBetweenAttack;
+
     public int damage = 2;
 
     private bool _playerInRange = false;
@@ -20,7 +19,6 @@ public class RangedEnemy : MonoBehaviour
 
     private Transform _player;
     private PlayerHealth _playerHealth;
-    
 
     private void Start()
     {
@@ -32,13 +30,11 @@ public class RangedEnemy : MonoBehaviour
     private void FixedUpdate()
     {
         _timeSinceLastAttack -= Time.deltaTime;
-        
+
         if (_playerInRange)
         {
-
-                RangedUnitMovement();
-                RangedAttack();
-           
+            RangedUnitMovement();
+            RangedAttack();
         }
 
         if (PlayerSpotted())
@@ -64,8 +60,6 @@ public class RangedEnemy : MonoBehaviour
         return false;
     }
 
-   
-
     private void RangedAttack()
     {
         if (_timeSinceLastAttack <= 0)
@@ -77,8 +71,7 @@ public class RangedEnemy : MonoBehaviour
 
     private void RangedUnitMovement()
     {
-        
-       transform.LookAt(_player);
+        transform.LookAt(_player);
     }
 
     //needs reference to player health for attacking

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Player
 {
@@ -16,7 +14,6 @@ namespace Player
         {
             if (Instance != null && Instance != this)
             {
-
                 Destroy(this.gameObject);
             }
             else

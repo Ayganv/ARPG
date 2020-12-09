@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    private NavMeshAgent agent => GetComponent<NavMeshAgent>();
+    private NavMeshAgent Agent => GetComponent<NavMeshAgent>();
 
     public void Update()
     {
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                agent.SetDestination(hit.point);
+                Agent.SetDestination(hit.point);
             }
         }
     }

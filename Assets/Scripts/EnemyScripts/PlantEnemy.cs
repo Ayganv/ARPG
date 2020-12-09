@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Player;
 using UnityEngine;
 
 public class PlantEnemy : MonoBehaviour
@@ -14,7 +12,7 @@ public class PlantEnemy : MonoBehaviour
 
     private void Start()
     {
-        _player= GameObject.FindGameObjectWithTag("Player").transform;
+        _player = PlayerManager.Instance.transform;
     }
 
     private void Update()
@@ -22,7 +20,7 @@ public class PlantEnemy : MonoBehaviour
         DealDamage();
     }
 
-    void DealDamage()
+    private void DealDamage()
     {
         if (Vector3.Distance(transform.position, _player.position) <= damageRadius)
         {

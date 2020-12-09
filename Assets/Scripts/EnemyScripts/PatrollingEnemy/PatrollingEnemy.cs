@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class PatrollingEnemy : MonoBehaviour {
+public class PatrollingEnemy : MonoBehaviour
+{
     public Transform[] waypoints;
     public int Speed;
     public float AttackDamage = 1;
@@ -8,59 +9,52 @@ public class PatrollingEnemy : MonoBehaviour {
     private float distanceToWaypoint;
     private PlayerHealth playerHealth;
 
-    private float timer;
-    public float timeToWait = 5;
-
-    void Start() {
+    private void Start()
+    {
         waypointIndex = 0;
-        transform.LookAt(waypoints[waypointIndex].position); 
+        transform.LookAt(waypoints[waypointIndex].position);
         playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        timer += Time.deltaTime;
         distanceToWaypoint = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
-        
-        if(distanceToWaypoint < 1f)
+
+        if (distanceToWaypoint < 1f)
         {
-            
-            if (timer >= timeToWait)
-            {
-                IncreaseIndex();
-                timer -= timeToWait;
-            }
+            IncreaseIndex();
         }
-        else
-        {
-            Patrol();
-        }
+
+        Patrol();
     }
 
-    void Patrol() 
+    private void Patrol()
     {
         transform.Translate(Vector3.forward * Speed * Time.deltaTime);
     }
 
-    void IncreaseIndex() {
+    private void IncreaseIndex()
+    {
         waypointIndex++;
-        if(waypointIndex >= waypoints.Length) {
-           waypointIndex= 0; 
+        if (waypointIndex >= waypoints.Length)
+        {
+            waypointIndex = 0;
         }
         transform.LookAt(waypoints[waypointIndex].position);
     }
 
-    void Attack()
-    { 
+    private void Attack()
+    {
         playerHealth.TakeDamage(AttackDamage);
     }
 
-    private void OnCollisionEnter(Collision other){
-        
-        if (other.gameObject.CompareTag("Player")){
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
             Debug.Log("touched player");
             Attack();
-            
+
             //either destroy acorn or reset it to one of the waypoints
         }
     }

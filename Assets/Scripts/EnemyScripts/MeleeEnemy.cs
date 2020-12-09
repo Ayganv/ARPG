@@ -10,13 +10,12 @@ public class MeleeEnemy : MonoBehaviour
 
     [Space]
     public float stoppingDistance;
+
     public float viewRadius;
 
     [Header("Combat Settings")]
-    
-
-    [Space]
     public float timeBetweenAttack;
+
     public int damage = 2;
 
     private bool _playerInAggroRange = false;
@@ -24,7 +23,6 @@ public class MeleeEnemy : MonoBehaviour
 
     private Transform _player;
     private PlayerHealth _playerHealth;
-    
 
     private void Start()
     {
@@ -87,8 +85,6 @@ public class MeleeEnemy : MonoBehaviour
             }
         }
     }
-
-   
 
     //needs reference to player health for attacking
 }

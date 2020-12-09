@@ -15,7 +15,7 @@ public class Acorn : MonoBehaviour
     public bool projectile;
 
     private void Awake(){
-        var playerHealth = FindObjectOfType<PlayerHealth>();
+        var playerHealth = PlayerManager.Instance.PlayerHealth;
         
         if(playerHealth!=null)
             target = playerHealth.transform.position;

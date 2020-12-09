@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 using UnityEngine.Events;
-using Player;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -16,14 +16,14 @@ public class PlayerHealth : MonoBehaviour
     public float redColorDuration;
 
     private Color regularColor;
-    private Renderer renderer => GetComponent<Renderer>();
+    private Renderer Renderer => GetComponent<Renderer>();
     private float timer;
 
     private void Start()
     {
         Health = MaxHealth;
-        
-        regularColor = renderer.material.color;
+
+        regularColor = Renderer.material.color;
     }
 
     private void Update()
@@ -59,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         Health -= damageAmount;
-        renderer.material.color = Color.red;
+        Renderer.material.color = Color.red;
         timer = 0;
         print($"{this} has taken {damageAmount} damage, {PlayerManager.Instance.PlayerHealth.Health} health remain");
         OnTakingDamage.Invoke();
@@ -69,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (timer >= redColorDuration)
         {
-            renderer.material.color = regularColor;
+            Renderer.material.color = regularColor;
         }
     }
 }
