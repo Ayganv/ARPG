@@ -25,7 +25,7 @@ public class MaxRespawn : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L)) CurrentSpawn = this.transform.position;
     }
     
-    public void ReviveButton()
+    public void ReviveAtCheckPointButton()
     {
         playerHealth.Dead = false;
         playerHealth.Health = playerHealth.MaxHealth;
@@ -33,6 +33,14 @@ public class MaxRespawn : MonoBehaviour
         transform.position = CurrentSpawn;
         gameOver.gameoverMenu.SetActive(false);
         GetComponent<NavMeshAgent>().destination = CurrentSpawn;
+    }
+    public void ReviveAtCorpseButton()
+    {
+        playerHealth.Dead = false;
+        playerHealth.Health = playerHealth.MaxHealth;
+        
+        gameOver.gameoverMenu.SetActive(false);
+        GetComponent<NavMeshAgent>().destination = transform.position;
     }
     
     private void OnTriggerEnter(Collider other)
