@@ -31,7 +31,7 @@ Transform:
   - {fileID: 7287936885239419465}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &7287936884342714302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0661e0e36ffe144b832adc803456f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 1
   acorn: {fileID: 6111075669625626036, guid: 815f58d28bd47d24d84f8e4cc87edbd3, type: 3}
+  timeBetweenShots: 1
 --- !u!1 &7287936885239419470
 GameObject:
   m_ObjectHideFlags: 0
