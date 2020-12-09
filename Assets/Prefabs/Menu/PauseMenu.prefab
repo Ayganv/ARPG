@@ -124,7 +124,7 @@ MonoBehaviour:
   startPlaying:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3500524035762385587, guid: b6c12bd1e75ff0742aa32e5024fa3ca3, type: 3}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Play
         m_Mode: 1
@@ -151,9 +151,9 @@ MonoBehaviour:
   pausePlaying:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3500524035762385587, guid: b6c12bd1e75ff0742aa32e5024fa3ca3, type: 3}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
-        m_MethodName: Stop
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
