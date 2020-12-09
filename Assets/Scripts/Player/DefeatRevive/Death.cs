@@ -25,6 +25,7 @@ public class Death : MonoBehaviour
         {
             var vectorzero = new Vector3(0,0,0);
             Die(true, false, vectorzero, vectorzero, true);
+            Time.timeScale = 0;
         }
     }
 
