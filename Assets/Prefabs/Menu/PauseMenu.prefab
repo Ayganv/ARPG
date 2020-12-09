@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/UI/uiTransitionEvent
+  Event: event:/UI/uiButtonEvent
   PlayEvent: 13
   StopEvent: 0
   AllowFadeout: 1
