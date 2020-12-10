@@ -60,9 +60,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4169108800412525998}
   - component: {fileID: 6785000817068849489}
+  - component: {fileID: 4169108800412525997}
   - component: {fileID: 2771188694936287357}
   - component: {fileID: 6347954965718607261}
-  - component: {fileID: 4169108800412525997}
   - component: {fileID: 6388107681873909115}
   - component: {fileID: 4169108800412525999}
   - component: {fileID: 4169108800412525992}
@@ -106,6 +106,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc7b123f676fbb4782f880a5f134294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4169108800412525997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169108800412525995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5a425051c68a54bb1af389f702da07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UsingMaxDistance: 1
+  MaxDestinationDistance: 15
 --- !u!114 &2771188694936287357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,18 +167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageIndicatorDuration: 0.1
   DamageIndicatorColor: {r: 1, g: 0, b: 0, a: 0}
---- !u!114 &4169108800412525997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4169108800412525995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5a425051c68a54bb1af389f702da07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6388107681873909115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dead1: 0
   gameover: {fileID: 0}
-  Health: 100
 --- !u!1 &4260969625764543764
 GameObject:
   m_ObjectHideFlags: 0
