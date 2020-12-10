@@ -8214,15 +8214,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1256065972}
     - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: PositionOffset.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
       propertyPath: PositionOffset.y
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
       propertyPath: PositionOffset.z
-      value: -10
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
       propertyPath: CameraDirection.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: CameraDirection.y
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7371254618587050255, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}

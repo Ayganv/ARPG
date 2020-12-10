@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraCanZoom: 1
-  CameraDirection: {x: 45, y: 0, z: 0}
+  CameraDirection: {x: 45, y: 45, z: 0}
   CameraSpeed: 0.33
   LookAtTarget: 0
-  PositionOffset: {x: 0, y: 15, z: -15}
+  PositionOffset: {x: -7, y: 10, z: -7}
   Target: {fileID: 0}
   ZoomDistanceMinMax: {x: 5, y: 30}
   ZoomSpeed: 5
