@@ -1,19 +1,46 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerController : MonoBehaviour
+namespace Player
 {
-    private NavMeshAgent Agent => GetComponent<NavMeshAgent>();
-
-    public void Update()
+    public class PlayerController : MonoBehaviour
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        public bool UsingMaxDistance = false;
 
-            if (Physics.Raycast(ray, out RaycastHit hit))
+        [Space]
+        public float MaxDestinationDistance;
+
+        private NavMeshAgent Agent => GetComponent<NavMeshAgent>();
+
+        public void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                Agent.SetDestination(hit.point);
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out RaycastHit hit) && CanSetDestination(hit.point))
+                {
+                    Agent.SetDestination(hit.point);
+                }
+            }
+        }
+
+        private bool CanSetDestination(Vector3 point)
+        {
+            if (!UsingMaxDistance)
+            {
+                return true;
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, point) <= MaxDestinationDistance)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
     }
