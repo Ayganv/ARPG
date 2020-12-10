@@ -14,6 +14,7 @@ public class PlantEnemy : MonoBehaviour
     private void Start()
     {
         _player = PlayerManager.Instance.transform;
+        _playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
     private void Update()
