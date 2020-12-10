@@ -10,7 +10,7 @@ namespace Player
         [Space]
         public float MaxDestinationDistance;
 
-        private NavMeshAgent Agent => GetComponent<NavMeshAgent>();
+        public NavMeshAgent Agent => GetComponent<NavMeshAgent>();
 
         public void Update()
         {
