@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlantEnemy : MonoBehaviour
 {
+    public int plantHealth;
     public int damage;
     public float timeBetweenAttack;
     public float damageRadius;

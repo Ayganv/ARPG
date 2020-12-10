@@ -7,7 +7,7 @@ public class Acorn : MonoBehaviour
     public float Speed;
 
     [Space]
-    public float Damage;
+    public int Damage;
 
     public Vector3 target;
     private float timer;

@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     public bool followingProjectile;
 
     private RangedEnemy _rangedEnemy;
-    private float _damageToInflict;
+    private int _damageToInflict;
 
     private void Start()
     {
