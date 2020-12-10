@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class PlayerHealth : MonoBehaviour
 {
     public int MaxHealth;
-    public float Health;
+    public int Health;
 
     [Space]
     public bool Dead;
@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log($"{this} has died");
     }
 
-    public void TakeDamage(float damageAmount)
+    public void TakeDamage(int damageAmount)
     {
         Health -= damageAmount;
         print($"{this} has taken {damageAmount} damage, {PlayerManager.Instance.PlayerHealth.Health} health remain");
