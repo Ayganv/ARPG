@@ -9,6 +9,7 @@ public class PatrollingEnemy : MonoBehaviour
 
     private int waypointIndex;
     private float distanceToWaypoint;
+    public float timeToWait = 3;
     private PlayerHealth playerHealth;
     [Space]
     public float absorbDistance = 2f;
@@ -17,8 +18,7 @@ public class PatrollingEnemy : MonoBehaviour
     public UnityEvent OnShooting;
     public UnityEvent OnAbsorbing;
 
-   
-    
+    private float timer;
     private bool hasAbsorbed = false;
     
     private void Start()
@@ -30,6 +30,7 @@ public class PatrollingEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        timer += Time.deltaTime;
         distanceToWaypoint = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
 
         if (distanceToWaypoint < absorbDistance && !hasAbsorbed){
@@ -39,12 +40,18 @@ public class PatrollingEnemy : MonoBehaviour
         
         if (distanceToWaypoint < shootDistance)
         {
-            OnShooting.Invoke();
-            IncreaseIndex();
-            hasAbsorbed = false;
+            if (timer >= timeToWait)
+            {
+                IncreaseIndex();
+                timer -= timeToWait;
+                OnShooting.Invoke();
+                hasAbsorbed = false;
+            }
         }
-
-        Patrol();
+        else
+        {
+            Patrol();
+        }
     }
 
     private void Patrol()
