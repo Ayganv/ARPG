@@ -357,7 +357,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Audio/FMOD/Weird Dreams 8_12.fspro
+  sourceProjectPath: Assets/Audio/FMOD/Weird Dreams 10_12.fspro
   sourceBankPath: Assets\Audio\FMOD\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
