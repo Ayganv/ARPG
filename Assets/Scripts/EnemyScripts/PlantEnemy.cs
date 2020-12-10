@@ -1,5 +1,6 @@
 ﻿using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlantEnemy : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PlantEnemy : MonoBehaviour
     private Transform _player;
     private float _timeSinceLastAttack;
 
+    public UnityEvent PlantAttacked;
+    
+    
     private void Start()
     {
         _player = PlayerManager.Instance.transform;
@@ -28,6 +32,7 @@ public class PlantEnemy : MonoBehaviour
         {
             if (_timeSinceLastAttack <= 0)
             {
+                PlantAttacked.Invoke();
                 _playerHealth.TakeDamage(damage);
                 _timeSinceLastAttack = timeBetweenAttack;
             }
