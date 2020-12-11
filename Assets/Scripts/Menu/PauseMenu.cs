@@ -32,8 +32,6 @@ public class PauseMenu : MonoBehaviour
             instance = this;
         }
 
-        DontDestroyOnLoad(this.gameObject);
-
         if (startPlaying == null){
             startPlaying = new UnityEvent();
         }

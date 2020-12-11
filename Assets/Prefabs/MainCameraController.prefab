@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraCanZoom: 1
-  CameraDirection: {x: 45, y: 45, z: 0}
+  CameraDirection: {x: 45, y: -45, z: 0}
   CameraSpeed: 0.33
   LookAtTarget: 0
-  PositionOffset: {x: -7, y: 10, z: -7}
+  PositionOffset: {x: 15, y: 21.5, z: -15}
   Target: {fileID: 0}
-  ZoomDistanceMinMax: {x: 5, y: 30}
+  ZoomDistanceMinMax: {x: 25, y: 30}
   ZoomSpeed: 5
 --- !u!1 &7962483701626591761
 GameObject:
