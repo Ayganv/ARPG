@@ -385,7 +385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5566180159450543413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1501052, y: -0.0502491, z: 1.9195967}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4234581249108818402}
@@ -402,7 +402,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3677846795274549725, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
       propertyPath: m_Name
-      value: _reguica_PH
+      value: Preguica_PH
       objectReference: {fileID: 0}
     - target: {fileID: 4053669023925511015, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
       propertyPath: m_RootOrder
