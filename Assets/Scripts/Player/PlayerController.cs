@@ -27,7 +27,8 @@ namespace Player
                 if (Physics.Raycast(ray, out RaycastHit hit) && CanSetDestination(hit.point))
                 {
                     Agent.SetDestination(hit.point);
-                    anim.SetTrigger("ToRun");
+                    if(anim != null) 
+                        anim.SetTrigger("ToRun");
                 }
             }
         }
