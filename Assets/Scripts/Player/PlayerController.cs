@@ -5,6 +5,7 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
+        private Animator anim;
         public bool UsingMaxDistance = false;
 
         [Space]
@@ -12,6 +13,11 @@ namespace Player
 
         public NavMeshAgent Agent => GetComponent<NavMeshAgent>();
 
+        public void Start()
+        {
+        anim = GetComponent<Animator>();
+        }
+        
         public void Update()
         {
             if (Input.GetMouseButtonDown(0))
@@ -21,6 +27,7 @@ namespace Player
                 if (Physics.Raycast(ray, out RaycastHit hit) && CanSetDestination(hit.point))
                 {
                     Agent.SetDestination(hit.point);
+                    anim.SetTrigger("ToRun");
                 }
             }
         }
