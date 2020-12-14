@@ -36,7 +36,7 @@ namespace Player
             }
         }
 
-        private bool CanSetDestination(Vector3 point)
+        public bool CanSetDestination(Vector3 point)
         {
             if (!UsingMaxDistance)
             {
