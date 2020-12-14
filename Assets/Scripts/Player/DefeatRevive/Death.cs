@@ -30,12 +30,10 @@ public class Death : MonoBehaviour
         }
     }
 
-    public void Die(bool deadbool, bool playerMovement, Vector3 velocity, Vector3 angularVelocity, bool gameOver)
+    public void Die(bool deadbool, bool playerMovement, bool gameOver)
     {
         dead1 = deadbool;
         Player.GetComponent<PlayerController>().enabled = playerMovement;
-        Player.GetComponent<Rigidbody>().velocity = velocity;
-        Player.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
         gameover.SetActive(gameOver);
     }
 
