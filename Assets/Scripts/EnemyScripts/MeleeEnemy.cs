@@ -30,7 +30,7 @@ public class MeleeEnemy : MonoBehaviour
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-        _playerHealth = FindObjectOfType<PlayerHealth>();
+        _playerHealth = _player.GetComponent<PlayerHealth>();
         _timeSinceLastAttack = timeBetweenAttack;
     }
 
