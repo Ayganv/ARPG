@@ -8,10 +8,7 @@ namespace Player.UI
     public class PlayerUIManager : MonoBehaviour
     {
         [Header("Health UI")]
-        public Text HealthText;
-
-        [Space]
-        public Slider HealthBar;
+        public Image HealthBar;
 
         private void Start()
         {
@@ -25,14 +22,12 @@ namespace Player.UI
 
         private void HealthUISetup()
         {
-            HealthBar.maxValue = PlayerManager.Instance.PlayerHealth.MaxHealth;
-            HealthBar.value = PlayerManager.Instance.PlayerHealth.Health;
+            HealthBar.fillAmount = PlayerManager.Instance.PlayerHealth.Health / 100;
         }
 
         private void UpdateHealthUI(float HealthAmount)
         {
-            HealthBar.value = HealthAmount;
-            HealthText.text = "" + HealthAmount;
+            HealthBar.fillAmount = HealthAmount / 100;
         }
     }
 }
