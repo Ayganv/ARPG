@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dead1: 0
-  gameover: {fileID: 0}
+  gameover: {fileID: 1686610373}
   DeathPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &338247750
 GameObject:
@@ -1064,7 +1064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1280804185716636854, guid: b322da6790cbb484985688c607f6a857, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -213.13208
+      value: -214.4779
       objectReference: {fileID: 0}
     - target: {fileID: 1280804185716636854, guid: b322da6790cbb484985688c607f6a857, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1100,7 +1100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1280804185716636854, guid: b322da6790cbb484985688c607f6a857, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.7000122
       objectReference: {fileID: 0}
     - target: {fileID: 1280804185716636854, guid: b322da6790cbb484985688c607f6a857, type: 3}
       propertyPath: m_AnchoredPosition.y
