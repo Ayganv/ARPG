@@ -462,6 +462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+--- !u!4 &497712771 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4169108800412525998, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+  m_PrefabInstance: {fileID: 497712770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &534150264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -768,6 +773,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -6.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 497712771}
     - target: {fileID: 4867738977954772937, guid: ebe0196dd00033945b7baa84bc1cb07b, type: 3}
       propertyPath: RotationOffset.w
       value: 0.85355335
@@ -1197,11 +1206,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 384002577168506910, guid: 571998bcba9d3df44a1b98653e528a6a, type: 3}
       propertyPath: InteractionDistance
-      value: 3.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2264257220800532006, guid: 571998bcba9d3df44a1b98653e528a6a, type: 3}
       propertyPath: SceneIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4968463519814750882, guid: 571998bcba9d3df44a1b98653e528a6a, type: 3}
       propertyPath: m_Name
