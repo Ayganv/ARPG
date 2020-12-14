@@ -11,22 +11,26 @@ namespace Player
         [Space]
         public float MaxDestinationDistance;
 
+        private bool hasAnim;
+
         public NavMeshAgent Agent => GetComponent<NavMeshAgent>();
 
-        public void Start()
-        {
-        anim = GetComponentInChildren<Animator>();
+        public void Start(){
+            anim = GetComponentInChildren<Animator>();
+            hasAnim = anim!=null;
         }
         
         public void Update()
         {
             if (Agent.remainingDistance <= Agent.stoppingDistance)
             {
-                anim.SetBool("ToRun", false);
+                if(hasAnim)
+                    anim.SetBool("ToRun", false);
             }
             if (Input.GetMouseButtonDown(0))
             {
-                anim.SetBool("ToRun", true);
+                if(hasAnim)
+                    anim.SetBool("ToRun", true);
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out RaycastHit hit) && CanSetDestination(hit.point))

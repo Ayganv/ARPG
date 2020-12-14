@@ -1150,6 +1150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PatrollingAcorn
       objectReference: {fileID: 0}
+    - target: {fileID: 8821063121921754845, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9184055975836124056, guid: e34e8f0fd31079d4d850355f2719f0a0, type: 3}
       propertyPath: m_RootOrder
       value: 11
