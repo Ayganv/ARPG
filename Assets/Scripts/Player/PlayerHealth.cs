@@ -27,16 +27,17 @@ public class PlayerHealth : MonoBehaviour
         //Temporary commands for testing
         if (Input.GetKeyDown(KeyCode.K)) Health = 0;
 
-        if (Health <= 0)
+        if (Health <= 0 && !Dead)
         {
+            OnDeath.Invoke();
             Die();
         }
+        Debug.Log("player is dead:" + Dead);
     }
 
     public void Die()
     {
         Dead = true;
-        OnDeath.Invoke();
         Debug.Log($"{this} has died");
     }
 
