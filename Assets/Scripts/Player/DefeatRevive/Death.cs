@@ -23,7 +23,7 @@ public class Death : MonoBehaviour
 
     private void Update()
     {
-        if (Health.Health == 0)
+        if (Health.Health <= 0)
         {
             Die(true, false, true);
             Time.timeScale = 0;
