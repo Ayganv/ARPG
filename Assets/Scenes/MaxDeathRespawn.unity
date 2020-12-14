@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: c212626a4a5758b489b7204d8dcfe520, type: 2}
+--- !u!114 &19555763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4640374291807640054, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+  m_PrefabInstance: {fileID: 712307670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &24706234
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +496,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 19555763}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &442026105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +688,18 @@ MonoBehaviour:
       - m_Target: {fileID: 167475384}
         m_TargetAssemblyTypeName: MaxRespawn, Assembly-CSharp
         m_MethodName: ReviveAtCheckPointButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 19555763}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1329,6 +1364,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260868582}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1294068699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294068700}
+  m_Layer: 0
+  m_Name: environment_evilplant_pustule (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1294068700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294068699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1337154736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,67 +1755,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417619803}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1596343215
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -47.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3591425610188991111, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3917559848817199658, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: stoppingDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223424535098978365, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
-      propertyPath: m_Name
-      value: environment_evilplant_pustule
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b0ce986030bcdfe4cbe16ed7392f08b0, type: 3}
 --- !u!1 &1601424017
 GameObject:
   m_ObjectHideFlags: 0
