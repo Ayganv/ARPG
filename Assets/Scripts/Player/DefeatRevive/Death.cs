@@ -11,6 +11,7 @@ public class Death : MonoBehaviour
     private PlayerHealth Health;
     private Revive Revive;
     private GameObject Player;
+    public Vector3 DeathPosition;
 
     private void Start()
     {
@@ -24,14 +25,15 @@ public class Death : MonoBehaviour
     {
         if (Health.Health == 0)
         {
-            var vectorzero = new Vector3(0, 0, 0);
-            Die(true, false, vectorzero, vectorzero, true);
+           
+            Die(true, false, true);
             Time.timeScale = 0;
         }
     }
 
     public void Die(bool deadbool, bool playerMovement, bool gameOver)
     {
+        DeathPosition = this.transform.position;
         dead1 = deadbool;
         Player.GetComponent<PlayerController>().enabled = playerMovement;
         gameover.SetActive(gameOver);
