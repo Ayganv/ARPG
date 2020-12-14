@@ -15,20 +15,23 @@ namespace Player
 
         public void Start()
         {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         }
         
         public void Update()
         {
+            if (Agent.remainingDistance <= Agent.stoppingDistance)
+            {
+                anim.SetBool("ToRun", false);
+            }
             if (Input.GetMouseButtonDown(0))
             {
+                anim.SetBool("ToRun", true);
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out RaycastHit hit) && CanSetDestination(hit.point))
                 {
                     Agent.SetDestination(hit.point);
-                    if(anim != null) 
-                        anim.SetTrigger("ToRun");
                 }
             }
         }
