@@ -25,7 +25,6 @@ public class Death : MonoBehaviour
     {
         if (Health.Health == 0)
         {
-           
             Die(true, false, true);
             Time.timeScale = 0;
         }

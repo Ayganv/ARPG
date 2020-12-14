@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 1280804185716636852}
   - component: {fileID: 1280804185716636853}
   - component: {fileID: 740547636142164156}
+  - component: {fileID: 8603343562492172386}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -185,6 +186,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d070737f6c20e64fa3b3d2af011b322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8603343562492172386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280804185716636855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7dc97a4a8b38a84b832621044315a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dead1: 0
+  gameover: {fileID: 0}
+  DeathPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1280804185855076295
 GameObject:
   m_ObjectHideFlags: 0
