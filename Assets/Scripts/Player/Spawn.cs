@@ -17,6 +17,7 @@ public class Spawn : MonoBehaviour
     {
         PlayerManager.Instance.PlayerController.Agent.destination = FixedSpawn;
         this.transform.position = FixedSpawn;
+        FindObjectOfType<PlayerController>().enabled = true;
         FindObjectOfType<Death>().gameOverMenu(gameOver: false);
         GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Health = 100;
         Time.timeScale = 1;
