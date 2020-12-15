@@ -43,9 +43,7 @@ namespace Player{
                 PlayerMeleeAttack.Invoke();
                 _enemyTarget.TakeDamage(damage);
                 Debug.Log(_enemyTarget.Health + "enemy health");
-                if (_enemyTarget.Health <= 0){
-                    Destroy(_enemyTarget.gameObject);
-                }
+                
             }
         }
     }
