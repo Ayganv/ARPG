@@ -19,9 +19,9 @@ public class TargetEnemy : MonoBehaviour
 
     private void OnMouseOver(){
         if(Input.GetMouseButtonDown(0))
-            Debug.Log("plant targeted with mouse left mouse button");
+            Debug.Log(this.gameObject + "plant targeted with mouse left mouse button");
         
         if(Input.GetMouseButtonDown(1))
-            Debug.Log("plant targeted with mouse right mouse button");
+            Debug.Log(this.gameObject + "plant targeted with mouse right mouse button");
     }
 }
