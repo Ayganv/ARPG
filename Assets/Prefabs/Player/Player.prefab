@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UsingMaxDistance: 1
-  MaxDestinationDistance: 15
+  MaxDestinationDistance: 30
 --- !u!114 &2771188694936287357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 647039571449919212, guid: ff6e3641945f44c42a826c90dc1a114b, type: 3}
   chargeUpTime: 1
+  chargeCounter: 0
   targetPos: {x: 0, y: 0, z: 0}
   hasATarget: 0
 --- !u!1 &4260969625764543764
