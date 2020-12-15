@@ -22,11 +22,22 @@ public class TargetEnemy : MonoBehaviour
     private void OnMouseOver(){
         if (Input.GetMouseButtonDown(0)){
             Debug.Log(this.gameObject + "plant targeted with mouse left mouse button");
-            PlayerManager.Instance.GetComponent<MeleeAttack>().InitiateAttack(this.gameObject);
-        }
+            PlayerManager.Instance.MeleeAttack.InitiateAttack(this.gameObject);
             
+        }
+
+
+        if (Input.GetMouseButton(1))
+        {
+            
+            PlayerManager.Instance.RangedAttack.targetPos = transform.position;
+            PlayerManager.Instance.RangedAttack.hasATarget = true;
+            
+        }
         
-        if(Input.GetMouseButtonDown(1))
-            Debug.Log(this.gameObject + "plant targeted with mouse right mouse button");
+        else
+        {
+            PlayerManager.Instance.RangedAttack.hasATarget = false;
+        }
     }
 }
