@@ -127,4 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 10
   secondsUntilDestroy: 1.5
-  Damage: 0
+  Damage: 25

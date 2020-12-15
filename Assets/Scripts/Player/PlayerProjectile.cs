@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using EnemyScripts;
 using Player;
 using UnityEngine;
+
 
 public class PlayerProjectile : MonoBehaviour
 {
@@ -38,8 +40,13 @@ public class PlayerProjectile : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
-        //add if statements for enemies
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+           other.gameObject.GetComponentInParent<EvilPlantHealth>().TakeDamage(Damage);
+           Destroy(this.gameObject);
+        }
+            
     }
 
     public void DestroyAfterTime()

@@ -1822,7 +1822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b32d77ca7933440ba5ad9c40846e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantHealth: 0
   damage: 10
   timeBetweenAttack: 1
   damageRadius: 4.04
@@ -2584,7 +2583,7 @@ GameObject:
   - component: {fileID: 6481796441255960228}
   m_Layer: 0
   m_Name: environment_evilplant_pustule
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2680,7 +2679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b32d77ca7933440ba5ad9c40846e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantHealth: 100
   damage: 10
   timeBetweenAttack: 1
   damageRadius: 2.63

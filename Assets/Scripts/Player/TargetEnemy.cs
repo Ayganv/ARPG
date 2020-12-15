@@ -40,4 +40,9 @@ public class TargetEnemy : MonoBehaviour
             PlayerManager.Instance.RangedAttack.hasATarget = false;
         }
     }
+
+    private void OnMouseExit()
+    {
+        PlayerManager.Instance.RangedAttack.hasATarget = false;
+    }
 }
