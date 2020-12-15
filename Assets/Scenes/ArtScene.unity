@@ -14522,6 +14522,10 @@ PrefabInstance:
       propertyPath: ChargeBar
       value: 
       objectReference: {fileID: 883899215}
+    - target: {fileID: 1228687059392653255, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f1cd019c1202ab74e881a3452c853ee8, type: 3}
     - target: {fileID: 3022605382619779230, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -14602,9 +14606,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3565938926709940600, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee85493bba9205848bfbbd41aefd9d8e, type: 3}
+    - target: {fileID: 5224147716040334067, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5817013462950680436, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835411875084749241, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6189704930719454759, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
