@@ -19,12 +19,21 @@ public class RangedAttack : MonoBehaviour
 
     void Update()
     {
+        ChargeAttack();
+    }
+
+    private void ChargeAttack()
+    {
         if (Input.GetMouseButton(1))
         {
             if (hasATarget)
             {
-                ChargeAttack();
+                chargeCounter -= Time.deltaTime;
             }
+        }
+        else if (chargeCounter <= 0 && Input.GetMouseButtonUp(1))
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
         }
         else
         {
@@ -32,17 +41,6 @@ public class RangedAttack : MonoBehaviour
         }
     }
 
-    private void ChargeAttack()
-    {
-        if (chargeCounter <= 0)
-        {
-            Instantiate(projectile, transform.position, Quaternion.identity);
-            chargeCounter = chargeUpTime;
-        }
-        else
-        {
-            chargeCounter -= Time.deltaTime;
-        }
-    }
+
     
 }
