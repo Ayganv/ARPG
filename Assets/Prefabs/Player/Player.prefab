@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 2972427916325789601}
   - component: {fileID: 3080979154700605410}
   - component: {fileID: 8685908434076986239}
+  - component: {fileID: 5044276063223820633}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -453,6 +454,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentSpawn: {x: 0, y: 0, z: 0}
+--- !u!114 &5044276063223820633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169108800412525995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bea86d3411aa5498d441b4ddcc3e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  timeBetweenAttack: 2
+  damageRadius: 20
+  PlayerMeleeAttack:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4260969625764543764
 GameObject:
   m_ObjectHideFlags: 0
