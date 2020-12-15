@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
@@ -18,6 +19,7 @@ public class Spawn : MonoBehaviour
         this.transform.position = FixedSpawn;
         FindObjectOfType<Death>().gameOverMenu(gameOver: false);
         GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().Health = 100;
+        Time.timeScale = 1;
         Death.gameover.SetActive(false);
         Death.dead = false;
 
