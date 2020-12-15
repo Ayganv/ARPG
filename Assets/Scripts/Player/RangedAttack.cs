@@ -7,14 +7,14 @@ public class RangedAttack : MonoBehaviour
 {
     public GameObject projectile;
     public float chargeUpTime;
-    private float _chargeCounter;
+    public float chargeCounter;
     public Vector3 targetPos;
     public bool hasATarget;
     
     
     void Start()
     {
-        _chargeCounter = chargeUpTime;
+        chargeCounter = chargeUpTime;
     }
 
     void Update()
@@ -28,20 +28,20 @@ public class RangedAttack : MonoBehaviour
         }
         else
         {
-            _chargeCounter = chargeUpTime;
+            chargeCounter = chargeUpTime;
         }
     }
 
     private void ChargeAttack()
     {
-        if (_chargeCounter <= 0)
+        if (chargeCounter <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
-            _chargeCounter = chargeUpTime;
+            chargeCounter = chargeUpTime;
         }
         else
         {
-            _chargeCounter -= Time.deltaTime;
+            chargeCounter -= Time.deltaTime;
         }
     }
     

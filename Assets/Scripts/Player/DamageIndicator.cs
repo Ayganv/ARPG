@@ -11,12 +11,13 @@ public class DamageIndicator : MonoBehaviour
     private bool TimerActive = false;
 
     private Color OriginalColor;
-    private Renderer Renderer => GetComponent<Renderer>();
+    private Renderer[] Renderers;
     private float TimeElasped;
 
     private void Awake()
     {
-        OriginalColor = Renderer.material.color;
+        Renderers = GetComponentsInChildren<Renderer>();
+
     }
 
     private void Update()
@@ -31,7 +32,10 @@ public class DamageIndicator : MonoBehaviour
 
     public void StartDamageIndicator()
     {
-        Renderer.material.color = DamageIndicatorColor;
+        foreach (Renderer renderer in Renderers)
+        {
+            renderer.material.color = DamageIndicatorColor;
+        }
         TimerActive = true;
     }
 
@@ -39,7 +43,10 @@ public class DamageIndicator : MonoBehaviour
     {
         if (TimeElasped >= DamageIndicatorDuration)
         {
-            Renderer.material.color = OriginalColor;
+            foreach (Renderer renderer in Renderers)
+            {
+                renderer.material.color = Color.white;
+            }
             TimeElasped = 0.0f;
             TimerActive = false;
         }
