@@ -44,5 +44,6 @@ public class TargetEnemy : MonoBehaviour
     private void OnMouseExit()
     {
         PlayerManager.Instance.RangedAttack.hasATarget = false;
+        PlayerManager.Instance.RangedAttack.chargeCounter = PlayerManager.Instance.RangedAttack.chargeUpTime;
     }
 }
