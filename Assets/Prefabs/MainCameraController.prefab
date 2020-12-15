@@ -49,7 +49,7 @@ MonoBehaviour:
   CameraSpeed: 0.33
   LookAtTarget: 0
   PositionOffset: {x: 15, y: 21.5, z: -15}
-  Target: {fileID: 0}
+  Target: {fileID: 4169108800412525998, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
   ZoomDistanceMinMax: {x: 25, y: 30}
   ZoomSpeed: 5
 --- !u!1 &7962483701626591761

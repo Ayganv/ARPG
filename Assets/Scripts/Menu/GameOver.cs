@@ -1,27 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
     public GameObject gameoverMenu;
 
-    private PlayerHealth playerHealth;
-    // Start is called before the first frame update
+    
     void Start()
     {
         gameoverMenu.SetActive(false);
-        playerHealth = FindObjectOfType<PlayerHealth>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (playerHealth.Dead)
+        if (PlayerManager.Instance.PlayerHealth.Dead)
         {
+            PlayerManager.Instance.PlayerController.enabled = false;
             gameoverMenu.SetActive(true);
             Time.timeScale = 0;
         }
-        else Time.timeScale = 1;
+        else
+        {
+            PlayerManager.Instance.PlayerController.enabled = true;
+            Time.timeScale = 1;
+        }
     }
 }
