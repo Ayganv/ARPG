@@ -12,6 +12,8 @@ namespace Player
 
         public Rigidbody PlayerRigidBody => GetComponent<Rigidbody>();
 
+        public MeleeAttack MeleeAttack => GetComponent<MeleeAttack>();
+        public RangedAttack RangedAttack => GetComponent<RangedAttack>();
         public PlayerController PlayerController => GetComponent<PlayerController>();
 
         private void Awake()
