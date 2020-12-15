@@ -6,16 +6,17 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    public bool dead1 = false;
+    public bool dead;
     public GameObject gameover;
     private PlayerHealth Health;
     private Revive Revive;
     private GameObject Player;
-    public Vector3 DeathPosition;
+    public Vector3 deathPosition;
+    private bool isDying;
 
     private void Start()
     {
-        gameover.SetActive(false);
+        gameOverMenu(false);
         Revive = FindObjectOfType<Revive>();
         Player = GameObject.FindWithTag("Player");
         Health = FindObjectOfType<PlayerHealth>();
@@ -23,21 +24,28 @@ public class Death : MonoBehaviour
 
     private void Update()
     {
-        if (Health.Health <= 0)
+        if (Health.Health <= 0 && !dead)
         {
-            Die(true, false, true);
-            Time.timeScale = 0;
+            dead = true;
+            Player.GetComponent<PlayerController>().enabled = false;
+            StartCoroutine(DelayGameOver(5));
+            gameOverMenu(true);
         }
+        
+    }
+    IEnumerator DelayGameOver(float delayTime)
+    {
+        Debug.Log("Player has died");
+        yield return new WaitForSeconds(delayTime);
+        Debug.Log("Showing Menu");
     }
 
-    public void Die(bool deadbool, bool playerMovement, bool gameOver)
+
+    public void gameOverMenu(bool gameOver)
     {
-        DeathPosition = this.transform.position;
-        dead1 = deadbool;
-        Player.GetComponent<PlayerController>().enabled = playerMovement;
+        deathPosition = this.transform.position;
         gameover.SetActive(gameOver);
     }
-
 
     public void KillButtom()
     {
