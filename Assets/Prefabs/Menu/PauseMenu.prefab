@@ -135,7 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3500524035762385587, guid: b6c12bd1e75ff0742aa32e5024fa3ca3, type: 3}
+      - m_Target: {fileID: 841994745926681494, guid: f9d6a4143e9443e4d904b6c0ae9578e2, type: 3}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Play
         m_Mode: 1
@@ -162,7 +162,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3500524035762385587, guid: b6c12bd1e75ff0742aa32e5024fa3ca3, type: 3}
+      - m_Target: {fileID: 841994745926681494, guid: f9d6a4143e9443e4d904b6c0ae9578e2, type: 3}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Stop
         m_Mode: 1
