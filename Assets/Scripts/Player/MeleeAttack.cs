@@ -18,7 +18,9 @@ namespace Player{
         public void InitiateAttack(GameObject enemy){
             _enemyTarget = enemy.GetComponentInParent<EvilPlantHealth>();
         }
-        private void Start(){
+        private void Start()
+        {
+            anim = GetComponentInChildren<Animator>();
             _player = PlayerManager.Instance.transform;
         }
 
@@ -42,6 +44,7 @@ namespace Player{
             
             if (Vector3.Distance(_enemyTarget.transform.position, _player.position) <= damageRadius){
                 PlayerMeleeAttack.Invoke();
+                anim.SetTrigger("ToMelee");
                 _enemyTarget.TakeDamage(damage);
                 Debug.Log(_enemyTarget.Health + "enemy health");
                 _enemyTarget = null;
