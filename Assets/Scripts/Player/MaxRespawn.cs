@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -30,19 +31,25 @@ public class MaxRespawn : MonoBehaviour
     {
         playerHealth.Dead = false;
         playerHealth.Health = playerHealth.MaxHealth;
+        GetComponent<NavMeshAgent>().ResetPath();
+        GetComponent<NavMeshAgent>().enabled = false;
 
-        transform.position = CurrentSpawn;
         gameOver.gameoverMenu.SetActive(false);
-        GetComponent<NavMeshAgent>().destination = CurrentSpawn;
+        PlayerManager.Instance.transform.position = CurrentSpawn;
+        
+        GetComponent<NavMeshAgent>().enabled = true;
+        PlayerManager.Instance.PlayerController.enabled = true;
+        Time.timeScale = 1;
     }
 
     public void ReviveAtCorpseButton()
     {
         playerHealth.Dead = false;
         playerHealth.Health = playerHealth.MaxHealth;
-
         gameOver.gameoverMenu.SetActive(false);
         GetComponent<NavMeshAgent>().destination = transform.position;
+        PlayerManager.Instance.PlayerController.enabled = true;
+        Time.timeScale = 1;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,7 +57,7 @@ public class MaxRespawn : MonoBehaviour
         if (other.tag == "Respawn")
         {
             CurrentSpawn = other.transform.position;
-            print("new checkpoint set");
+            print("new checkpoint set at position: " + CurrentSpawn);
         }
     }
 }

@@ -2,29 +2,34 @@
 using System.Collections.Generic;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameOver : MonoBehaviour
 {
     public GameObject gameoverMenu;
 
+    public UnityEvent StopAnimation;
     
     void Start()
     {
         gameoverMenu.SetActive(false);
     }
     
-    void Update()
+
+    public void DelayedGameOverMenu()
     {
-        if (PlayerManager.Instance.PlayerHealth.Dead)
-        {
-            PlayerManager.Instance.PlayerController.enabled = false;
-            gameoverMenu.SetActive(true);
-            Time.timeScale = 0;
-        }
-        else
-        {
-            PlayerManager.Instance.PlayerController.enabled = true;
-            Time.timeScale = 1;
-        }
+        PlayerManager.Instance.PlayerController.enabled = false;
+        Time.timeScale = 0;
+        StartCoroutine(ShowGameOver());
+    }
+    
+    
+    
+    
+    IEnumerator ShowGameOver()
+    {
+        yield return new WaitForSeconds(2);
+        gameoverMenu.SetActive(true);
+        StopAnimation.Invoke();
     }
 }
