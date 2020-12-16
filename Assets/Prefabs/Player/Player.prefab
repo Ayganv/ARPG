@@ -275,6 +275,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: DelayedGameOverMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 770395517149466370}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTakingDamage:
     m_PersistentCalls:
       m_Calls:
@@ -469,7 +493,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentSpawn: {x: 0, y: 0, z: 0}
-  PuffOfSmoke: {fileID: 6662497814327658415}
 --- !u!114 &5044276063223820633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,7 +772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
       propertyPath: m_LocalPosition.z
@@ -863,5 +886,10 @@ PrefabInstance:
 --- !u!4 &142758428216858040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4053669023925511015, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
+  m_PrefabInstance: {fileID: 4159822511029794527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &770395517149466370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3677846795274549725, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
   m_PrefabInstance: {fileID: 4159822511029794527}
   m_PrefabAsset: {fileID: 0}

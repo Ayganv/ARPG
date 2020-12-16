@@ -27,7 +27,7 @@ namespace Player
                 if(hasAnim)
                     anim.SetBool("ToRun", false);
             }
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && PauseMenu.instance.IsPaused == false)
             {
                 if(hasAnim)
                     anim.SetBool("ToRun", true);

@@ -1,30 +1,24 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Player;
+﻿using Player;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class RangedAttack : MonoBehaviour
 {
+    private Animator anim;
     public GameObject projectile;
     public float chargeUpTime;
     public float chargeCounter;
     public Vector3 targetPos;
     public bool hasATarget;
-    
-    
-    void Start()
+
+    private void Start()
     {
         chargeCounter = chargeUpTime;
+        anim = GetComponentInChildren<Animator>();
     }
 
-    void Update()
+    private void Update()
     {
-        
-        
-            ChargeAttack();
-        Debug.Log(PlayerManager.Instance.PlayerRigidBody);
+        ChargeAttack();
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -36,9 +30,9 @@ public class RangedAttack : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            
             if (hasATarget)
             {
+                anim.SetTrigger("ToRanged");
                 chargeCounter -= Time.deltaTime;
             }
         }
@@ -52,7 +46,4 @@ public class RangedAttack : MonoBehaviour
             chargeCounter = chargeUpTime;
         }
     }
-
-
-    
 }
