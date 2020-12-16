@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -57,7 +58,7 @@ public class PauseMenu : MonoBehaviour
 
         if(Input.GetKeyDown(MenuKey)){
 
-            ToggleMenu(true);
+            ToggleMenu(!IsPaused && !PlayerManager.Instance.PlayerHealth.Dead);
         }
     }
 
