@@ -1,4 +1,5 @@
 ﻿using System;
+using Player;
 using Units;
 
 namespace EnemyScripts{
@@ -7,6 +8,7 @@ namespace EnemyScripts{
         {
             if (Health <= 0){
                 Destroy(gameObject);
+                PlayerManager.Instance.RangedAttack.hasATarget = false;
             }
         }
     }
