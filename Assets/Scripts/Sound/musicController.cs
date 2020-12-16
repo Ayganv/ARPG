@@ -1,30 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class musicController : MonoBehaviour{ 
-   public float value = 1;
-   static float currentLevel = 0;
+   private static float CurrentLevel => SceneManager.GetActiveScene().buildIndex;
 
-   public static float CurrentLevel{
-       set => currentLevel = value;
-   }
    private void Start(){
-           
-       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("musicSequenceParameter", value); 
-   }
-
-   public void playLevel2(){
-       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("musicSequenceParameter", 2); 
+       
+       playMainTheme();
    }
     
    public void playerDeath(){
-       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("musicSequenceParameter", 3); 
+       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("musicSequenceParameter", 3 + CurrentLevel); 
    }
 
-   public void playerDeath2(){
-       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("musicSequenceParameter", 4); 
-   }
-
-   public void playMainTheme(float musicSequence){
-       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("musicSequenceParameter", musicSequence + currentLevel); 
+   public void playMainTheme(){
+       Debug.Log("starting level music for level: " + (1+CurrentLevel));
+       //music index start at 1, but level starts at 0
+       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("musicSequenceParameter", 1 + CurrentLevel); 
    }
 }
