@@ -182,7 +182,6 @@ GameObject:
   - component: {fileID: 8685908434076986239}
   - component: {fileID: 5044276063223820633}
   - component: {fileID: 7602982420631611792}
-  - component: {fileID: 994433413}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -505,8 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bea86d3411aa5498d441b4ddcc3e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  timeBetweenAttack: 2
+  damage: 15
+  timeBetweenAttack: 0.5
   damageRadius: 5
   PlayerMeleeAttack:
     m_PersistentCalls:
@@ -537,23 +536,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 647039571449919212, guid: ff6e3641945f44c42a826c90dc1a114b, type: 3}
   chargeUpTime: 1
-  chargeCounter: 0
-  targetPos: {x: 0, y: 0, z: 0}
-  hasATarget: 0
---- !u!114 &994433413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4169108800412525995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a4659db87f3c9541bb033cc0888e18c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 647039571449919212, guid: ff6e3641945f44c42a826c90dc1a114b, type: 3}
-  chargeUpTime: 2
   chargeCounter: 0
   targetPos: {x: 0, y: 0, z: 0}
   hasATarget: 0
