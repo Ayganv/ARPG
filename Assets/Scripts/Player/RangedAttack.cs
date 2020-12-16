@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class RangedAttack : MonoBehaviour
 {
+    private Animator anim;
     public GameObject projectile;
     public float chargeUpTime;
     public float chargeCounter;
@@ -17,6 +18,7 @@ public class RangedAttack : MonoBehaviour
     void Start()
     {
         chargeCounter = chargeUpTime;
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -39,6 +41,7 @@ public class RangedAttack : MonoBehaviour
             
             if (hasATarget)
             {
+                anim.SetTrigger("ToRanged");
                 chargeCounter -= Time.deltaTime;
             }
         }
