@@ -469,7 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   timeBetweenAttack: 2
-  damageRadius: 20
+  damageRadius: 5
   PlayerMeleeAttack:
     m_PersistentCalls:
       m_Calls:
