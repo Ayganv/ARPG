@@ -21,9 +21,7 @@ public class TargetEnemy : MonoBehaviour
 
     private void OnMouseOver(){
         if (Input.GetMouseButtonDown(0)){
-            Debug.Log(this.gameObject + "plant targeted with mouse left mouse button");
             PlayerManager.Instance.MeleeAttack.InitiateAttack(this.gameObject);
-            
         }
 
 
