@@ -9,6 +9,8 @@ public class GameOver : MonoBehaviour
     public GameObject gameoverMenu;
 
     public UnityEvent StopAnimation;
+
+    public float DelayTime = 2;
     
     void Start()
     {
@@ -28,7 +30,7 @@ public class GameOver : MonoBehaviour
     
     IEnumerator ShowGameOver()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(DelayTime);
         gameoverMenu.SetActive(true);
         StopAnimation.Invoke();
     }
