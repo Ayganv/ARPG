@@ -833,6 +833,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4169108800412525998}
     m_Modifications:
+    - target: {fileID: 277818721928210380, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
+    - target: {fileID: 1643215761227897153, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
+    - target: {fileID: 2608767301278195876, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
     - target: {fileID: 3677846795274549725, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
       propertyPath: m_Name
       value: Preguica_PH
@@ -881,6 +893,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7336810827690356322, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
+    - target: {fileID: 8577885180700963760, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
+    - target: {fileID: 9118859471563443595, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7716d6b05ca236040beb4c697edc3157, type: 3}
 --- !u!4 &142758428216858040 stripped
