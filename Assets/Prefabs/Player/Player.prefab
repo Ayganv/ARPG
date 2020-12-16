@@ -539,6 +539,7 @@ MonoBehaviour:
   chargeCounter: 0
   targetPos: {x: 0, y: 0, z: 0}
   hasATarget: 0
+  ChargeBar: {fileID: 0}
 --- !u!1 &4176836010654304650
 GameObject:
   m_ObjectHideFlags: 0
