@@ -9,6 +9,7 @@ public class RangedAttack : MonoBehaviour
     public float chargeCounter;
     public Vector3 targetPos;
     public bool hasATarget;
+    public GameObject ChargeBar;
 
     private void Start()
     {
@@ -32,12 +33,14 @@ public class RangedAttack : MonoBehaviour
         {
             if (hasATarget)
             {
+                ChargeBar.SetActive(true);
                 anim.SetTrigger("ToRanged");
                 chargeCounter -= Time.deltaTime;
             }
         }
         else if (chargeCounter <= 0 && Input.GetMouseButtonUp(1))
         {
+            ChargeBar.SetActive(false);
             Instantiate(projectile, transform.position, Quaternion.identity);
             transform.LookAt(targetPos);
         }
