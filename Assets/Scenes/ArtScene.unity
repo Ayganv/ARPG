@@ -3301,6 +3301,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2129811753214531195, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
     - target: {fileID: 2771188694936287357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
       value: 4
@@ -3361,6 +3365,10 @@ PrefabInstance:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3420282224851120030, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
     - target: {fileID: 4169108800412525995, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3409,10 +3417,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4206830647439872275, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
+    - target: {fileID: 5131318411814796116, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
+    - target: {fileID: 5670152428136039791, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
     - target: {fileID: 6347954965718607261, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
       propertyPath: DamageIndicatorDuration
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6659484763342215357, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fecdb59a2740e44a89fb8a8da654919, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
 --- !u!1 &207154798 stripped
