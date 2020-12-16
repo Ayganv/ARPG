@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Units{
@@ -38,9 +39,12 @@ namespace Units{
         
         public virtual void TakeDamage(int damageAmount)
         {
-            Health -= damageAmount;
-            print($"{this} has taken {damageAmount} damage, {Health} health remain");
-            OnTakingDamage.Invoke();
+            if (!Dead)
+            {
+                Health -= damageAmount;
+                print($"{this} has taken {damageAmount} damage, {Health} health remain");
+                OnTakingDamage.Invoke();
+            }
         }
     }
 }
