@@ -298,7 +298,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1202356703590145292, guid: f9d6a4143e9443e4d904b6c0ae9578e2, type: 3}
         m_TargetAssemblyTypeName: musicController, Assembly-CSharp
         m_MethodName: playerDeath
         m_Mode: 1
