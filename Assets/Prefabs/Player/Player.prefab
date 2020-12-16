@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 8685908434076986239}
   - component: {fileID: 5044276063223820633}
   - component: {fileID: 7602982420631611792}
+  - component: {fileID: 994433413}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -202,6 +203,7 @@ Transform:
   m_Children:
   - {fileID: 7532312541237883459}
   - {fileID: 142758428216858040}
+  - {fileID: 848922108486208722}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -260,6 +262,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6662497814327658415}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   OnTakingDamage:
     m_PersistentCalls:
@@ -455,6 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentSpawn: {x: 0, y: 0, z: 0}
+  puffOfSmoke: {fileID: 6662497814327658415}
 --- !u!114 &5044276063223820633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +514,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 647039571449919212, guid: ff6e3641945f44c42a826c90dc1a114b, type: 3}
   chargeUpTime: 1
+  chargeCounter: 0
+  targetPos: {x: 0, y: 0, z: 0}
+  hasATarget: 0
+--- !u!114 &994433413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169108800412525995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4659db87f3c9541bb033cc0888e18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 647039571449919212, guid: ff6e3641945f44c42a826c90dc1a114b, type: 3}
+  chargeUpTime: 2
   chargeCounter: 0
   targetPos: {x: 0, y: 0, z: 0}
   hasATarget: 0
@@ -700,6 +732,77 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!1001 &453471458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4169108800412525998}
+    m_Modifications:
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662497814143462221, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_Name
+      value: Puff of smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662497814143462221, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+--- !u!1 &6662497814327658415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6662497814143462221, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+  m_PrefabInstance: {fileID: 453471458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &848922108486208722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 848922108603703344, guid: 7b1af270669c861489710eb8c0785ade, type: 3}
+  m_PrefabInstance: {fileID: 453471458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4159822511029794527
 PrefabInstance:
   m_ObjectHideFlags: 0
