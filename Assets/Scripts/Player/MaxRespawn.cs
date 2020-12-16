@@ -13,6 +13,7 @@ public class MaxRespawn : MonoBehaviour
 
     private PlayerHealth playerHealth;
     private GameOver gameOver;
+    public GameObject PuffOfSmoke;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class MaxRespawn : MonoBehaviour
     {
         playerHealth.Dead = false;
         playerHealth.Health = playerHealth.MaxHealth;
-        
+        PuffOfSmoke.SetActive(false);
         GetComponent<NavMeshAgent>().ResetPath();
         GetComponent<NavMeshAgent>().enabled = false;
 
@@ -45,7 +46,7 @@ public class MaxRespawn : MonoBehaviour
     {
         playerHealth.Dead = false;
         playerHealth.Health = playerHealth.MaxHealth;
-
+        PuffOfSmoke.SetActive(false);
         gameOver.gameoverMenu.SetActive(false);
         GetComponent<NavMeshAgent>().destination = transform.position;
     }

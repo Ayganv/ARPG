@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentSpawn: {x: 0, y: 0, z: 0}
-  puffOfSmoke: {fileID: 6662497814327658415}
+  PuffOfSmoke: {fileID: 6662497814327658415}
 --- !u!114 &5044276063223820633
 MonoBehaviour:
   m_ObjectHideFlags: 0
