@@ -5,6 +5,7 @@ using UnityEngine.Events;
 namespace Player{
     public class MeleeAttack: MonoBehaviour
     {
+        private Animator anim;
         public int damage;
         public float timeBetweenAttack;
         public float damageRadius;
