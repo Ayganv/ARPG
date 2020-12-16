@@ -22,7 +22,8 @@ public class PlantEnemy : MonoBehaviour
 
     private void Update()
     {
-        DealDamage();
+        if(!PlayerManager.Instance.PlayerHealth.Dead)
+            DealDamage();
     }
 
     private void DealDamage()
