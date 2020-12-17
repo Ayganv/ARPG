@@ -14,6 +14,7 @@ public class RangedAttack : MonoBehaviour
 
     
     public UnityEvent chargeSound;
+    public UnityEvent stopChargeSound;
     public UnityEvent releaseSound;
 
     private bool chargesoundPlaying;
@@ -60,6 +61,7 @@ public class RangedAttack : MonoBehaviour
         }
         else
         {
+            stopChargeSound.Invoke();
             chargeCounter = chargeUpTime;
             chargesoundPlaying = false;
         }
