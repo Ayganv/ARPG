@@ -41,7 +41,7 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("RangedEnemy"))
         {
            other.gameObject.GetComponentInParent<EvilPlantHealth>().TakeDamage(Damage);
            Destroy(this.gameObject);

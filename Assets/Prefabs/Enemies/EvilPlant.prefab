@@ -8341,6 +8341,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4958249612234817550}
     m_Modifications:
+    - target: {fileID: 267906352513291968, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1323963250587183743, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: looping
       value: 0
@@ -8352,6 +8356,10 @@ PrefabInstance:
     - target: {fileID: 3180762406217834279, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: looping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954400540192246686, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5227664342335046920, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: m_RootOrder
@@ -8371,7 +8379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227664342335046920, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5227664342335046920, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8379,7 +8387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227664342335046920, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5227664342335046920, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8416,6 +8424,22 @@ PrefabInstance:
     - target: {fileID: 6505215946299546215, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624786166034633857, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765064240329142774, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785970103686565527, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862729736924637779, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7526409677124056478, guid: f6977737278e5da459cd2cc9e068bd20, type: 3}
       propertyPath: looping
