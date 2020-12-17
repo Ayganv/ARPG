@@ -43,6 +43,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmbientSound
       objectReference: {fileID: 0}
+    - target: {fileID: 5917659965705711246, guid: 7161c4568ef734e4bb255d8f7701f0eb, type: 3}
+      propertyPath: Event
+      value: event:/BGM/ambientSimpleEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917659965705711246, guid: 7161c4568ef734e4bb255d8f7701f0eb, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5917659965705711247, guid: 7161c4568ef734e4bb255d8f7701f0eb, type: 3}
       propertyPath: m_RootOrder
       value: 0
