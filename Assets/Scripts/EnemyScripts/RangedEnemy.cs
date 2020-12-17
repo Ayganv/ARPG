@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class RangedEnemy : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class RangedEnemy : MonoBehaviour
 
     private Transform _player;
     private PlayerHealth _playerHealth;
+
+    public UnityEvent fireCannon;
 
     private void Start()
     {
@@ -65,6 +68,7 @@ public class RangedEnemy : MonoBehaviour
         if (_timeSinceLastAttack <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
+            fireCannon.Invoke();
             _timeSinceLastAttack = timeBetweenAttack;
         }
     }

@@ -7,6 +7,8 @@ namespace EnemyScripts
 {
     public class EvilPlantHealth : UnitHealth
     {
+        public ParticleSystem hitEffect1;
+        public ParticleSystem hitEffect2;
         public float DestroyDelay = 3.0f;
 
         private void FixedUpdate()
@@ -22,6 +24,12 @@ namespace EnemyScripts
         {
             yield return new WaitForSeconds(waitTime);
             Destroy(gameObject);
+        }
+
+        public void OnHitVFX()
+        {
+            hitEffect1.Play();
+            hitEffect2.Play();
         }
     }
 }
