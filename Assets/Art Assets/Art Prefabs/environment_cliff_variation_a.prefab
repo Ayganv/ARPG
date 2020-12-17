@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2136345529674034372}
   - component: {fileID: 3029244032979690337}
   - component: {fileID: 1004019232178509739}
-  m_Layer: 0
+  - component: {fileID: 2350289481051755838}
+  m_Layer: 9
   m_Name: environment_cliff_variation_a
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &2350289481051755838
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652260708106548862}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0498984
+  m_Height: 1.3350327
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
