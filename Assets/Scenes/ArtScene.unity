@@ -16030,6 +16030,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2038538751, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1105245981445235750, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
       propertyPath: StopAnimation.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
