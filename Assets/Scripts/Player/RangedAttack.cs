@@ -1,5 +1,6 @@
 ﻿using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RangedAttack : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class RangedAttack : MonoBehaviour
     public bool hasATarget;
     public GameObject ChargeBar;
 
+    
+    public UnityEvent chargeSound;
+    public UnityEvent releaseSound;
+
+    private bool chargesoundPlaying;
+    
     private void Start()
     {
         chargeCounter = chargeUpTime;
@@ -33,6 +40,11 @@ public class RangedAttack : MonoBehaviour
         {
             if (hasATarget)
             {
+                if (!chargesoundPlaying){
+                    chargeSound.Invoke();
+                    chargesoundPlaying = true;
+                }
+                
                 ChargeBar.SetActive(true);
                 anim.SetTrigger("ToRanged");
                 chargeCounter -= Time.deltaTime;
@@ -40,6 +52,8 @@ public class RangedAttack : MonoBehaviour
         }
         else if (chargeCounter <= 0 && Input.GetMouseButtonUp(1))
         {
+            releaseSound.Invoke();
+            chargesoundPlaying = false;
             ChargeBar.SetActive(false);
             Instantiate(projectile, transform.position, Quaternion.identity);
             transform.LookAt(targetPos);
@@ -47,6 +61,7 @@ public class RangedAttack : MonoBehaviour
         else
         {
             chargeCounter = chargeUpTime;
+            chargesoundPlaying = false;
         }
     }
 }
