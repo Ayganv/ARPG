@@ -1,4 +1,5 @@
-﻿using EnemyScripts;
+﻿using System.Collections;
+using EnemyScripts;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,7 +15,8 @@ namespace Player{
         private float _timeSinceLastAttack;
 
         public UnityEvent PlayerMeleeAttack;
-
+        public float attackDelayTime = 0.5f;
+        private bool hasStartedAttack;
         public void InitiateAttack(GameObject enemy){
             _enemyTarget = enemy.GetComponentInParent<EvilPlantHealth>();
         }
@@ -43,12 +45,20 @@ namespace Player{
             }
             
             if (Vector3.Distance(_enemyTarget.transform.position, _player.position) <= damageRadius){
-                PlayerMeleeAttack.Invoke();
-                anim.SetTrigger("ToMelee");
-                _enemyTarget.TakeDamage(damage);
-                Debug.Log(_enemyTarget.Health + " enemy health");
-                _enemyTarget = null;
+                if(!hasStartedAttack)
+                    StartCoroutine(StartMeleeAttack()); 
             }
+        }
+        
+        IEnumerator StartMeleeAttack(){
+            hasStartedAttack = true;
+            anim.SetTrigger("ToMelee");
+            yield return new WaitForSeconds(attackDelayTime);
+            PlayerMeleeAttack.Invoke();
+            _enemyTarget.TakeDamage(damage);
+            Debug.Log(_enemyTarget.Health + " enemy health");
+            _enemyTarget = null;
+            hasStartedAttack = false;
         }
     }
 }
