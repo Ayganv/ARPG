@@ -1,9 +1,10 @@
-﻿using Player;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace Units{
-    public class UnitHealth:MonoBehaviour{
+namespace Units
+{
+    public class UnitHealth : MonoBehaviour
+    {
         public int MaxHealth;
         public int Health;
 
@@ -28,7 +29,7 @@ namespace Units{
             {
                 OnDeath.Invoke();
                 Die();
-            } 
+            }
         }
 
         private void Die()
@@ -36,7 +37,7 @@ namespace Units{
             Dead = true;
             Debug.Log($"{this} has died");
         }
-        
+
         public virtual void TakeDamage(int damageAmount)
         {
             if (!Dead)

@@ -9,6 +9,6 @@ public class PlayerHealth : UnitHealth{
         //Temporary commands for testing
         if (Input.GetKeyDown(KeyCode.K)) Health = 0;
 
-        base.Update(); 
+        base.Update();
     }
 }
