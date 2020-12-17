@@ -17,7 +17,6 @@ public class DamageIndicator : MonoBehaviour
     private void Awake()
     {
         Renderers = GetComponentsInChildren<Renderer>();
-
     }
 
     private void Update()

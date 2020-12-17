@@ -5,36 +5,38 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        private Animator anim;
+        [Header("Player Controller Settings")]
         public bool UsingMaxDistance = false;
 
         [Space]
         public float MaxDestinationDistance;
 
-        private bool hasAnim;
+        private Animator PlayerAnimator => GetComponentInChildren<Animator>();
 
         public NavMeshAgent Agent => GetComponent<NavMeshAgent>();
 
-        public void Start(){
-            anim = GetComponentInChildren<Animator>();
-            hasAnim = anim!=null;
-        }
-        
         public void Update()
         {
+            if (PlayerAnimator == null)
+            {
+                Debug.LogError("The player has no animator");
+
+                return;
+            }
+
             if (Agent.remainingDistance <= Agent.stoppingDistance)
             {
-                if(hasAnim)
-                    anim.SetBool("ToRun", false);
+                PlayerAnimator.SetBool("ToRun", false);
             }
+
             if (Input.GetMouseButtonDown(0) && PauseMenu.instance.IsPaused == false)
             {
-                if(hasAnim)
-                    anim.SetBool("ToRun", true);
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out RaycastHit hit) && CanSetDestination(hit.point))
                 {
+                    PlayerAnimator.SetBool("ToRun", true);
+
                     Agent.SetDestination(hit.point);
                 }
             }
