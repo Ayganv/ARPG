@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 4053669023925511015}
   - component: {fileID: 4002537265478984658}
   m_Layer: 0
-  m_Name: _reguica_PH
+  m_Name: Preguica_PH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

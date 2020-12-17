@@ -29,6 +29,7 @@ namespace Player{
         private void FixedUpdate(){
             if (_timeSinceLastAttack <= 0)
             {
+                
                 DealDamage();
                 _timeSinceLastAttack = timeBetweenAttack;
             }
@@ -40,10 +41,10 @@ namespace Player{
         }
 
         private void DealDamage(){
-            if (_enemyTarget == null){
+            if (_enemyTarget == null || _enemyTarget.Dead){
                 return;
             }
-            
+  
             if (Vector3.Distance(_enemyTarget.transform.position, _player.position) <= damageRadius){
                 if(!hasStartedAttack)
                     StartCoroutine(StartMeleeAttack()); 
