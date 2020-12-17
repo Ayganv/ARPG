@@ -411,9 +411,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 2.0522614
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5261307, z: 0}
 --- !u!65 &2972427916325789601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -425,8 +425,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.2180488, z: 1}
+  m_Center: {x: 0, y: 0.6090244, z: 0}
 --- !u!114 &3080979154700605410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,6 +486,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  attackDelayTime: 0.5
 --- !u!114 &7602982420631611792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,7 +728,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7651827166530419397, guid: 011770ec85823ff41af83fe089f351a1, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7651827166530419397, guid: 011770ec85823ff41af83fe089f351a1, type: 3}
       propertyPath: m_Materials.Array.data[0]
