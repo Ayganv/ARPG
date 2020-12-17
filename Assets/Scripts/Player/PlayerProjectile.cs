@@ -36,7 +36,8 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Respawn"))
+        
+       if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Respawn") && !other.gameObject.CompareTag("Projectile"))
         {
             Destroy(this.gameObject);
         }
