@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class Acorn : MonoBehaviour
 {
-    public float Speed;
+    public float speed;
+    public bool followingProjectile;
+    private Transform player;
 
-    [Space]
-    public int Damage;
+    [Space] public int Damage;
 
     public Vector3 target;
     private float timer;
     public float secondsUntilDestroy = 8;
     public bool projectile;
 
-    private void Awake(){
+    private void Awake()
+    {
         var playerHealth = PlayerManager.Instance.PlayerHealth;
-        
-        if(playerHealth!=null)
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        if (playerHealth != null)
             target = playerHealth.transform.position;
-        
+
         if (projectile && target != null)
         {
             transform.LookAt(target);
@@ -35,9 +38,15 @@ public class Acorn : MonoBehaviour
 
     public void Move()
     {
-        transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+        if (followingProjectile == true)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
+        else if (followingProjectile == false)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("RangedEnemy"))
