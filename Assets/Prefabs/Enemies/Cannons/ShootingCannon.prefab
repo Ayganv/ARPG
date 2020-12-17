@@ -28,6 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2708698921614630093}
+  - {fileID: 6211773745513173879}
   m_Father: {fileID: 4736998758094584789}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,7 +145,7 @@ MonoBehaviour:
   fireCannon:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1086581007175954940}
+      - m_Target: {fileID: 5329899357359449330}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Play
         m_Mode: 1
@@ -404,10 +405,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 644880243521922289, guid: 1696cdc12d83b5c4290571fd520fbb13, type: 3}
   m_PrefabInstance: {fileID: 3270783739459303484}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1086581007175954940 stripped
+--- !u!1001 &4794728324690604653
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 71699129197387289}
+    m_Modifications:
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701729178272905486, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+      propertyPath: m_Name
+      value: TrackingShootEvent
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+--- !u!4 &6211773745513173879 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1494890849220616474, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+  m_PrefabInstance: {fileID: 4794728324690604653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5329899357359449330 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2481597537865222592, guid: 1696cdc12d83b5c4290571fd520fbb13, type: 3}
-  m_PrefabInstance: {fileID: 3270783739459303484}
+  m_CorrespondingSourceObject: {fileID: 828054542029543071, guid: 631f8f49c52ef8e4da264e9189155e38, type: 3}
+  m_PrefabInstance: {fileID: 4794728324690604653}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1

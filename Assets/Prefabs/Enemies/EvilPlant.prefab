@@ -5456,7 +5456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/SFX/Hamster/hamsterDeathEvent
+  Event: event:/SFX/Plant/plantDeathEvent
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
