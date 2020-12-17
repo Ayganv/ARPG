@@ -40,7 +40,7 @@ public class RangedAttack : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            if (hasATarget)
+            if (hasATarget && !PlayerManager.Instance.PlayerController.Agent.hasPath)
             {
                 if (!chargesoundPlaying){
                     chargeSound.Invoke();
