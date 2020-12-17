@@ -500,11 +500,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 647039571449919212, guid: ff6e3641945f44c42a826c90dc1a114b, type: 3}
-  chargeUpTime: 1
-  chargeCounter: 0
+  chargeUpTime: 1.45
   targetPos: {x: 0, y: 0, z: 0}
   hasATarget: 0
   ChargeBar: {fileID: 0}
+  chargeCounter: 0
   chargeSound:
     m_PersistentCalls:
       m_Calls:
