@@ -3363,6 +3363,10 @@ PrefabInstance:
       propertyPath: ChargeBar
       value: 
       objectReference: {fileID: 890383514}
+    - target: {fileID: 7602982420631611792, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: chargeUpTime
+      value: 1.45
+      objectReference: {fileID: 0}
     - target: {fileID: 7651827165434225057, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
       propertyPath: m_Materials.Array.size
       value: 3
