@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class FadeAwayText : MonoBehaviour
@@ -10,7 +7,7 @@ public class FadeAwayText : MonoBehaviour
 
     private float timer;
     public float timeUntilFade = 5;
-    
+    public float fadeDuration = 0.5f;
 
     private void Update()
     {
@@ -23,6 +20,6 @@ public class FadeAwayText : MonoBehaviour
 
     public void FadeOut()
     {
-        text.CrossFadeAlpha(0f,2f,false);
+        text.CrossFadeAlpha(0f, fadeDuration, false);
     }
 }
