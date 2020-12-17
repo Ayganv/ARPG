@@ -272,7 +272,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1105245981445235750, guid: 54ec8fc37626c1d409a3901f6f386f22, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: DelayedGameOverMenu
         m_Mode: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1202356703590145292, guid: f9d6a4143e9443e4d904b6c0ae9578e2, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: musicController, Assembly-CSharp
         m_MethodName: playerDeath
         m_Mode: 1
@@ -453,6 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentSpawn: {x: 0, y: 0, z: 0}
+  DeathEffect: {fileID: 8555964040197056258}
 --- !u!114 &5044276063223820633
 MonoBehaviour:
   m_ObjectHideFlags: 0

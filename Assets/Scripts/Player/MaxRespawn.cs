@@ -1,15 +1,15 @@
 ﻿//using System.Collections;
 
-using System;
-using System.Collections.Generic;
 using Player;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class MaxRespawn : MonoBehaviour
 {
     public Vector3 CurrentSpawn;
 
+    public GameObject DeathEffect;
 
     private PlayerHealth playerHealth;
     private GameOver gameOver;
@@ -25,6 +25,11 @@ public class MaxRespawn : MonoBehaviour
     {
         //Temporary commands for testing
         if (Input.GetKeyDown(KeyCode.L)) CurrentSpawn = this.transform.position;
+
+        if (playerHealth.Dead == false)
+        {
+            DeathEffect.SetActive(false);
+        }
     }
 
     public void ReviveAtCheckPointButton()
@@ -36,7 +41,7 @@ public class MaxRespawn : MonoBehaviour
 
         gameOver.gameoverMenu.SetActive(false);
         PlayerManager.Instance.transform.position = CurrentSpawn;
-        
+
         GetComponent<NavMeshAgent>().enabled = true;
         PlayerManager.Instance.PlayerController.enabled = true;
         Time.timeScale = 1;
