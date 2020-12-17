@@ -18,6 +18,8 @@ namespace Player
 
         public PlayerController PlayerController => GetComponent<PlayerController>();
 
+        public CapsuleCollider CapsuleCollider => GetComponent<CapsuleCollider>();
+
         private void Awake()
         {
             if (Instance != null && Instance != this)

@@ -1,22 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Player;
+﻿using Player;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class GameOver : MonoBehaviour
 {
     public GameObject gameoverMenu;
 
-    public UnityEvent StopAnimation;
-
     public float DelayTime = 2;
-    
-    void Start()
+
+    private void Start()
     {
         gameoverMenu.SetActive(false);
     }
-    
 
     public void DelayedGameOverMenu()
     {
@@ -24,14 +19,10 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 0;
         StartCoroutine(ShowGameOver());
     }
-    
-    
-    
-    
-    IEnumerator ShowGameOver()
+
+    private IEnumerator ShowGameOver()
     {
         yield return new WaitForSeconds(DelayTime);
         gameoverMenu.SetActive(true);
-        StopAnimation.Invoke();
     }
 }
