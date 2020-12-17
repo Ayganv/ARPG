@@ -6,10 +6,11 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         [Header("Player Controller Settings")]
-        public bool UsingMaxDistance = false;
+        public bool UsingDistanceRestrictions = false;
 
         [Space]
         public float MaxDestinationDistance;
+        public float MinDestinationDistance;
 
         private Animator PlayerAnimator => GetComponentInChildren<Animator>();
 
@@ -44,13 +45,15 @@ namespace Player
 
         public bool CanSetDestination(Vector3 point)
         {
-            if (!UsingMaxDistance)
+            var distance = Vector3.Distance(transform.position, point);
+
+            if (!UsingDistanceRestrictions)
             {
                 return true;
             }
             else
             {
-                if (Vector3.Distance(transform.position, point) <= MaxDestinationDistance)
+                if (distance >= MinDestinationDistance && distance <= MaxDestinationDistance)
                 {
                     return true;
                 }
