@@ -3315,6 +3315,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4169108800412525997, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: MinDestinationDistance
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169108800412525997, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
+      propertyPath: UsingDistanceRestrictions
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4169108800412525998, guid: 3d3390ba6e4d0eb4e9df40313ab70192, type: 3}
       propertyPath: m_RootOrder
       value: 4
