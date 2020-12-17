@@ -3,19 +3,21 @@
 using Player;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
+using UnityEngine.VFX;
 
 public class MaxRespawn : MonoBehaviour
 {
     public Vector3 CurrentSpawn;
 
     public GameObject DeathEffect;
+    public VisualEffect ReviveEffect;
 
     private PlayerHealth playerHealth;
     private GameOver gameOver;
 
     private void Start()
     {
+        ReviveEffect.Stop();
         CurrentSpawn = this.transform.position;
         playerHealth = GetComponent<PlayerHealth>();
         gameOver = FindObjectOfType<GameOver>();
@@ -34,6 +36,7 @@ public class MaxRespawn : MonoBehaviour
 
     public void ReviveAtCheckPointButton()
     {
+        ReviveEffect.Play();
         playerHealth.Dead = false;
         playerHealth.Health = playerHealth.MaxHealth;
         GetComponent<NavMeshAgent>().ResetPath();
@@ -49,6 +52,7 @@ public class MaxRespawn : MonoBehaviour
 
     public void ReviveAtCorpseButton()
     {
+        ReviveEffect.Play();
         playerHealth.Dead = false;
         playerHealth.Health = playerHealth.MaxHealth;
         gameOver.gameoverMenu.SetActive(false);

@@ -342,7 +342,7 @@ MonoBehaviour:
   OnTakingDamage:
     m_PersistentCalls:
       m_Calls: []
-  DestroyDelay: 1
+  DestroyDelay: 0.7
 --- !u!1 &1074179526201353466
 GameObject:
   m_ObjectHideFlags: 0

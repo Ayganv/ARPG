@@ -46,7 +46,7 @@ namespace Player{
                 PlayerMeleeAttack.Invoke();
                 anim.SetTrigger("ToMelee");
                 _enemyTarget.TakeDamage(damage);
-                Debug.Log(_enemyTarget.Health + "enemy health");
+                Debug.Log(_enemyTarget.Health + " enemy health");
                 _enemyTarget = null;
             }
         }
