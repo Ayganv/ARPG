@@ -1,6 +1,7 @@
 ﻿using System;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Acorn : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Acorn : MonoBehaviour
     public float secondsUntilDestroy = 8;
     public bool projectile;
 
+    public UnityEvent startFollowing;
+    public UnityEvent stopFollowing;
     private void Awake()
     {
         var playerHealth = PlayerManager.Instance.PlayerHealth;
@@ -27,6 +30,8 @@ public class Acorn : MonoBehaviour
         {
             transform.LookAt(target);
         }
+        if(followingProjectile)
+            startFollowing.Invoke();
     }
 
     private void Update()
@@ -52,12 +57,14 @@ public class Acorn : MonoBehaviour
         if (!other.gameObject.CompareTag("RangedEnemy") && !other.gameObject.CompareTag("Projectile"))
         {
             Destroy(this.gameObject);
+            stopFollowing.Invoke();
         }
 
         if (other.gameObject.CompareTag("Player"))
         {
             PlayerManager.Instance.PlayerHealth.TakeDamage(Damage);
             Destroy(this.gameObject);
+            stopFollowing.Invoke();
         }
     }
 
@@ -66,6 +73,7 @@ public class Acorn : MonoBehaviour
         if (timer >= secondsUntilDestroy)
         {
             Destroy(gameObject);
+            stopFollowing.Invoke();
         }
     }
 }
