@@ -49,7 +49,7 @@ public class Acorn : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("RangedEnemy"))
+        if (!other.gameObject.CompareTag("RangedEnemy") && !other.gameObject.CompareTag("Projectile"))
         {
             Destroy(this.gameObject);
         }
