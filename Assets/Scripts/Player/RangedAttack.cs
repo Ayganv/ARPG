@@ -58,6 +58,7 @@ public class RangedAttack : MonoBehaviour
             chargeCounter = chargeUpTime;
             chargesoundPlaying = false;
             hasATarget = false;
+            ChargeBar.SetActive(false);
         }
         
         if (chargeCounter <= 0)
