@@ -47,7 +47,7 @@ MonoBehaviour:
     name: environment_grass_b
   - gameObject: {fileID: 3733868147922299892, guid: d927cac5aca80424489a1185efa4539b, type: 3}
     settings:
-      m_Strength: 68.5
+      m_Strength: 100
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 10, y: 360, z: 10}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -95,7 +95,7 @@ MonoBehaviour:
     name: environment_plant_c
   - gameObject: {fileID: 4505944598116255715, guid: 22dec92708e30894198ae0b5d4e5befa, type: 3}
     settings:
-      m_Strength: 57.25
+      m_Strength: 32.5
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -111,7 +111,7 @@ MonoBehaviour:
     name: environment_scattered_leaves_a
   - gameObject: {fileID: 1007821728386183265, guid: 163ec2a6fa5a4844ab55c07df81109b6, type: 3}
     settings:
-      m_Strength: 34.75
+      m_Strength: 10
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -127,7 +127,7 @@ MonoBehaviour:
     name: environment_scattered_leaves_b
   - gameObject: {fileID: 8782829083241037660, guid: e9e765b13ab9d93448c16512f5e64440, type: 3}
     settings:
-      m_Strength: 14.5
+      m_Strength: 28
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
