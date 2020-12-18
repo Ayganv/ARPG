@@ -21,4 +21,8 @@ public class Portal : MonoBehaviour
         SceneManager.LoadScene(SceneIndex);
         
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene(SceneIndex);
+    }
 }
