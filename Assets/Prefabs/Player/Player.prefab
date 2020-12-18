@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UsingDistanceRestrictions: 1
-  MaxDestinationDistance: 20
+  MaxDestinationDistance: 40
   MinDestinationDistance: 0.75
 --- !u!114 &2771188694936287357
 MonoBehaviour:
